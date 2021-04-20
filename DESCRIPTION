@@ -16,3 +16,5 @@ RoxygenNote: 7.1.1
 Imports: 
     dplyr,
     jsonlite
+URL: https://github.com/jirilukavsky/jspsychread
+BugReports: https://github.com/jirilukavsky/jspsychread/issues
