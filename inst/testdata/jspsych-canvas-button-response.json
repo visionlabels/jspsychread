@@ -1,0 +1,64 @@
+[
+	{
+		"rt": 2627.8999999910593,
+		"response": 2,
+		"color": "blue",
+		"radius": 100,
+		"trial_type": "canvas-button-response",
+		"trial_index": 0,
+		"time_elapsed": 2632,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 5701.100000008941,
+		"response": 0,
+		"color": "green",
+		"radius": 150,
+		"trial_type": "canvas-button-response",
+		"trial_index": 1,
+		"time_elapsed": 8335,
+		"internal_node_id": "0.0-1.0"
+	},
+	{
+		"rt": 3075.5,
+		"response": 0,
+		"line1_color": "blue",
+		"line1_length": 290,
+		"line2_color": "purple",
+		"line2_length": 170,
+		"trial_type": "canvas-button-response",
+		"trial_index": 2,
+		"time_elapsed": 11412,
+		"internal_node_id": "0.0-2.0"
+	},
+	{
+		"rt": 2342,
+		"response": 0,
+		"radius": 100,
+		"color": "red",
+		"trial_type": "canvas-button-response",
+		"trial_index": 3,
+		"time_elapsed": 13757,
+		"internal_node_id": "0.0-3.0-0.0"
+	},
+	{
+		"rt": 1657.2000000029802,
+		"response": 1,
+		"radius": 200,
+		"color": "green",
+		"trial_type": "canvas-button-response",
+		"trial_index": 4,
+		"time_elapsed": 15417,
+		"internal_node_id": "0.0-3.0-0.1"
+	},
+	{
+		"rt": 1520.7000000029802,
+		"response": 2,
+		"radius": 50,
+		"color": "blue",
+		"trial_type": "canvas-button-response",
+		"trial_index": 5,
+		"time_elapsed": 16939,
+		"internal_node_id": "0.0-3.0-0.2"
+	}
+]

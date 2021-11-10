@@ -1,0 +1,44 @@
+[
+	{
+		"view_history": [
+			{
+				"page_index": 0,
+				"viewing_time": 1725.8999999910593
+			},
+			{
+				"page_index": 1,
+				"viewing_time": 1074.300000011921
+			},
+			{
+				"page_index": 2,
+				"viewing_time": 732.5
+			}
+		],
+		"rt": 3533.2999999970198,
+		"trial_type": "instructions",
+		"trial_index": 0,
+		"time_elapsed": 3534,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"view_history": [
+			{
+				"page_index": 0,
+				"viewing_time": 4581.399999991059
+			},
+			{
+				"page_index": 1,
+				"viewing_time": 1058
+			},
+			{
+				"page_index": 2,
+				"viewing_time": 610.6000000089407
+			}
+		],
+		"rt": 6250.199999988079,
+		"trial_type": "instructions",
+		"trial_index": 1,
+		"time_elapsed": 9785,
+		"internal_node_id": "0.0-1.0"
+	}
+]

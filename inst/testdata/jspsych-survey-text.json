@@ -1,0 +1,23 @@
+[
+	{
+		"rt": 32876.89999999106,
+		"response": {
+			"Age": "21",
+			"BirthLocation": "London, United Kingdom"
+		},
+		"trial_type": "survey-text",
+		"trial_index": 0,
+		"time_elapsed": 32888,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 29792.59999999404,
+		"response": {
+			"Q0": "It all started fine.\nThen it got worse."
+		},
+		"trial_type": "survey-text",
+		"trial_index": 1,
+		"time_elapsed": 62701,
+		"internal_node_id": "0.0-1.0"
+	}
+]

@@ -1,0 +1,24 @@
+[
+	{
+		"rt": 12306,
+		"response": {
+			"first": "red",
+			"second": "green",
+			"third": "blue"
+		},
+		"trial_type": "survey-html-form",
+		"trial_index": 0,
+		"time_elapsed": 12308,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 8041,
+		"response": {
+			"response": "owl"
+		},
+		"trial_type": "survey-html-form",
+		"trial_index": 1,
+		"time_elapsed": 20351,
+		"internal_node_id": "0.0-1.0"
+	}
+]

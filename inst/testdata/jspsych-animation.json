@@ -1,0 +1,96 @@
+[
+	{
+		"success": true,
+		"timeout": false,
+		"failed_images": [],
+		"failed_audio": [],
+		"failed_video": [],
+		"trial_type": "preload",
+		"trial_index": 0,
+		"time_elapsed": 5,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"animation_sequence": [
+			{
+				"stimulus": "img/happy_face_1.jpg",
+				"time": 309.29999999701977
+			},
+			{
+				"stimulus": "img/happy_face_2.jpg",
+				"time": 603.8999999910593
+			},
+			{
+				"stimulus": "img/happy_face_3.jpg",
+				"time": 906.5999999940395
+			},
+			{
+				"stimulus": "img/happy_face_4.jpg",
+				"time": 1206.5
+			},
+			{
+				"stimulus": "img/happy_face_1.jpg",
+				"time": 1505.0999999940395
+			},
+			{
+				"stimulus": "img/happy_face_2.jpg",
+				"time": 1806
+			},
+			{
+				"stimulus": "img/happy_face_3.jpg",
+				"time": 2106.199999988079
+			},
+			{
+				"stimulus": "img/happy_face_4.jpg",
+				"time": 2406.3999999910593
+			},
+			{
+				"stimulus": "img/happy_face_1.jpg",
+				"time": 2704.3999999910593
+			},
+			{
+				"stimulus": "img/happy_face_2.jpg",
+				"time": 3006
+			},
+			{
+				"stimulus": "img/happy_face_3.jpg",
+				"time": 3302.699999988079
+			},
+			{
+				"stimulus": "img/happy_face_4.jpg",
+				"time": 3606.3999999910593
+			}
+		],
+		"response": [
+			{
+				"key_press": " ",
+				"rt": 917.4000000059605,
+				"stimulus": "img/happy_face_3.jpg"
+			},
+			{
+				"key_press": " ",
+				"rt": 1535.5,
+				"stimulus": "img/happy_face_1.jpg"
+			},
+			{
+				"key_press": "a",
+				"rt": 2037.7000000029802,
+				"stimulus": "img/happy_face_2.jpg"
+			},
+			{
+				"key_press": " ",
+				"rt": 2635.9000000059605,
+				"stimulus": "img/happy_face_4.jpg"
+			},
+			{
+				"key_press": "a",
+				"rt": 3293.5,
+				"stimulus": "img/happy_face_2.jpg"
+			}
+		],
+		"trial_type": "animation",
+		"trial_index": 1,
+		"time_elapsed": 3911,
+		"internal_node_id": "0.0-1.0"
+	}
+]

@@ -1,0 +1,47 @@
+[
+	{
+		"rt": 5504.5,
+		"response": "i",
+		"shape": "rectangle",
+		"trial_type": "canvas-keyboard-response",
+		"trial_index": 0,
+		"time_elapsed": 5508,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 1323.5999999940395,
+		"response": "e",
+		"shape": "circle",
+		"trial_type": "canvas-keyboard-response",
+		"trial_index": 1,
+		"time_elapsed": 6834,
+		"internal_node_id": "0.0-1.0"
+	},
+	{
+		"rt": 2309.5999999940395,
+		"response": "r",
+		"color": "red",
+		"trial_type": "canvas-keyboard-response",
+		"trial_index": 2,
+		"time_elapsed": 9147,
+		"internal_node_id": "0.0-2.0-0.0"
+	},
+	{
+		"rt": 1329.2000000029802,
+		"response": "b",
+		"color": "blue",
+		"trial_type": "canvas-keyboard-response",
+		"trial_index": 3,
+		"time_elapsed": 10480,
+		"internal_node_id": "0.0-2.0-0.1"
+	},
+	{
+		"rt": 4020,
+		"response": "b",
+		"color": "blue",
+		"trial_type": "canvas-keyboard-response",
+		"trial_index": 4,
+		"time_elapsed": 14501,
+		"internal_node_id": "0.0-2.0-0.2"
+	}
+]

@@ -1,0 +1,29 @@
+[
+	{
+		"rt": 3671.6000000089407,
+		"stimulus": "<p style=\"color: red; font-size: 48px; font-weight: bold;\">GREEN</p>",
+		"response": 2,
+		"trial_type": "html-button-response",
+		"trial_index": 0,
+		"time_elapsed": 3674,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 3545.2999999970198,
+		"stimulus": "<p style=\"color: green; font-size: 48px; font-weight: bold;\">GREEN</p>",
+		"response": 0,
+		"trial_type": "html-button-response",
+		"trial_index": 1,
+		"time_elapsed": 7221,
+		"internal_node_id": "0.0-1.0"
+	},
+	{
+		"rt": null,
+		"stimulus": "<p style=\"color: blue; font-size: 48px; font-weight: bold;\">RED</p>",
+		"response": null,
+		"trial_type": "html-button-response",
+		"trial_index": 2,
+		"time_elapsed": 9225,
+		"internal_node_id": "0.0-2.0"
+	}
+]

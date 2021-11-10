@@ -2,11 +2,11 @@ Package: jspsychread
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Jiri",
+           family = "Lukavsky",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "lukavsky@praha.psu.cas.cz",
+           comment = c(ORCID = "0000-0002-1082-229X"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -15,6 +15,12 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
     dplyr,
-    jsonlite
+    jsonlite,
+    magrittr,
+    tibble,
+    glue,
+    rlang,
+    tidyr,
+    purrr
 URL: https://github.com/jirilukavsky/jspsychread
 BugReports: https://github.com/jirilukavsky/jspsychread/issues

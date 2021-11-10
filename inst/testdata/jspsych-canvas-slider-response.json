@@ -1,0 +1,24 @@
+[
+	{
+		"rt": 7366.29999999702,
+		"response": 62,
+		"slider_start": 50,
+		"color1": "#FF3333",
+		"color2": "#FF6A33",
+		"trial_type": "canvas-slider-response",
+		"trial_index": 0,
+		"time_elapsed": 7370,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 4685.699999988079,
+		"response": 92,
+		"slider_start": 50,
+		"trial_type": "canvas-slider-response",
+		"trial_index": 1,
+		"time_elapsed": 12058,
+		"internal_node_id": "0.0-1.0",
+		"color1": "darkred",
+		"color2": "cyan"
+	}
+]

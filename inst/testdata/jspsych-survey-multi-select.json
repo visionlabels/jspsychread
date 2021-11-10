@@ -1,0 +1,25 @@
+[
+	{
+		"rt": 20453.5,
+		"response": {
+			"Colors": [
+				"Red",
+				"Blue",
+				"Black"
+			],
+			"Foods": [
+				"Apples",
+				"Bananas",
+				"Carrots"
+			]
+		},
+		"question_order": [
+			1,
+			0
+		],
+		"trial_type": "survey-multi-select",
+		"trial_index": 0,
+		"time_elapsed": 20457,
+		"internal_node_id": "0.0-0.0"
+	}
+]
