@@ -4,14 +4,20 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of jspsychread is to ...
+The goal of `jspsychread` is to transform the data collected in 
+[jsPsych](https://www.jspsych.org/) and stored in JSON format into R. The data are then available as tibbles (one trial per line) and you can filter them etc.
 
 ## Installation
 
-You can install the released version of jspsychread from [CRAN](https://CRAN.R-project.org) with:
+The package is in active development. 
+You can install the current version from GitHub with following code:
 
 ``` r
-install.packages("jspsychread")
+# Install devtools package if necessary
+if(!"devtools" %in% rownames(installed.packages())) install.packages("devtools")
+
+# Install the stable verion from GitHub
+devtools::install_github("jirilukavsky/motrack")
 ```
 
 ## Example
