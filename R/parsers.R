@@ -24,16 +24,16 @@ parse_animation <- function(d) {
   )
 }
 
-# jspsych-audio-button-response¶
+# jspsych-audio-button-response
 # https://www.jspsych.org/plugins/jspsych-audio-button-response/
 
 # jspsych-audio-keyboard-response
 # https://www.jspsych.org/plugins/jspsych-audio-keyboard-response/
 
-# jspsych-audio-slider-response¶
+# jspsych-audio-slider-response
 # https://www.jspsych.org/plugins/jspsych-audio-slider-response/
 
-# jspsych-canvas-button-response¶
+# jspsych-canvas-button-response
 # https://www.jspsych.org/plugins/jspsych-canvas-button-response/
 
 # jspsych-canvas-keyboard-response
