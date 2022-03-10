@@ -19,7 +19,7 @@ read_jspsych <- function(filepath, single = T) {
   i <- 1
   con <- file(filepath, "r")
   if (single) {
-    line <- readLines(con, n = -1L)
+    line <- readLines(con, n = -1L, warn = F) # don't warn about final EOL
     jd <- jsonlite::parse_json(line)
     results[[i]] <- parse_single_record(jd)
   } else {
