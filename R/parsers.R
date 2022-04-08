@@ -222,8 +222,30 @@ parse_instructions <- function(d) {
 # jspsych-maxdiff
 # https://www.jspsych.org/plugins/jspsych-maxdiff/
 
-# jspsych-preload
-# https://www.jspsych.org/plugins/jspsych-preload/
+#' jspsych-preload parser
+#'
+#' https://www.jspsych.org/plugins/jspsych-preload/
+#'
+#' success (boolean)	If true, then all files loaded successfully within the max_load_time. If false, then one or more file requests returned a failure and/or the file loading did not complete within the max_load_time duration.
+#' timeout (boolean)	If true, then the files did not finish loading within the max_load_time duration. If false, then the file loading did not timeout. Note that when the preload trial does not timeout (timeout: false), it is still possible for loading to fail (success: false). This happens if one or more files fails to load and all file requests trigger either a success or failure event before the max_load_time duration.
+#' failed_images (array)	One or more image file paths that produced a loading failure before the trial ended.
+#' failed_audio	(array)	One or more audio file paths that produced a loading failure before the trial ended.
+#' failed_video	(array)	One or more video file paths that produced a loading failure before the trial ended.
+#'
+#' @return Single row tibble with results
+#' @export
+#'
+#' @examples
+parse_preload <- function(d) {
+  tibble::tibble(
+    success = s(d$success),
+    timeout = s(d$timeout),
+    failed_images = list(s(d$failed_images)),
+    failed_audio = list(s(d$failed_audio)),
+    failed_video = list(s(d$failed_video))
+  )
+}
+
 
 # jspsych-rdk
 # https://www.jspsych.org/plugins/jspsych-rdk/
@@ -284,11 +306,47 @@ parse_survey_html_form <- function(d) {
 # jspsych-survey-text
 # https://www.jspsych.org/plugins/jspsych-survey-text/
 
-# jspsych-video-button-response
-# https://www.jspsych.org/plugins/jspsych-video-button-response/
+#' jspsych-video-button-response parser
+#'
+#' https://www.jspsych.org/plugins/jspsych-video-button-response/
+#'
+#' @param d List with unprocessed trial data
+#'
+#' @return Single row tibble with results
+#'
+#' response	(numeric) -	Indicates which key the subject pressed.
+#' rt	(numeric) -	The response time in milliseconds for the subject to make a response. The time is measured from when the stimulus first appears on the screen until the subject's response.
+#' stimulus	(string) - The path of the image that was displayed.
+#'
+#' @export
+parse_video_button_response <- function(d) {
+  tibble::tibble(
+    response = s(d$response),
+    rt = s(d$rt),
+    stimulus = unlist(s(d$stimulus))
+  )
+}
 
-# jspsych-video-keyboard-response
-# https://www.jspsych.org/plugins/jspsych-video-keyboard-response/
+#' jspsych-video-keyboard-response parser
+#'
+#' https://www.jspsych.org/plugins/jspsych-video-keyboard-response/
+#'
+#' @param d List with unprocessed trial data
+#'
+#' @return Single row tibble with results
+#'
+#' response	(numeric) -	Indicates which key the subject pressed.
+#' rt	(numeric) -	The response time in milliseconds for the subject to make a response. The time is measured from when the stimulus first appears on the screen until the subject's response.
+#' stimulus	(string) - The path of the image that was displayed.
+#'
+#' @export
+parse_video_keyboard_response <- function(d) {
+  tibble::tibble(
+    response = s(d$response),
+    rt = s(d$rt),
+    stimulus = unlist(s(d$stimulus))
+  )
+}
 
 # jspsych-video-slider-response
 # https://www.jspsych.org/plugins/jspsych-video-slider-response/
