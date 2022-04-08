@@ -1,5 +1,5 @@
 Package: jspsychread
-Title: What the Package Does (One Line, Title Case)
+Title: Read jsPsych data
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Jiri",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "lukavsky@praha.psu.cas.cz",
            comment = c(ORCID = "0000-0002-1082-229X"))
-Description: What the package does (one paragraph).
+Description: The package helps to process JSON data collected using jsPsych scripts.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
