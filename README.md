@@ -29,23 +29,26 @@ library(tidyverse)
 library(jspsychread)
 ## basic example code
 
-fn <- system.file("testdata", "jspsych-video-button-response.json", package = "jspsychread")
+fn <- demo_file("jspsych-video-button-response.json")
 d  <- read_jspsych(fn)
 
 # parse results of a specific trial types
-d %>% 
-  filter(trial_type == "preload") %>% 
-  mutate(processed = map(raw, ~parse_preload(.x))) %>% 
+d %>%
+  filter(trial_type == trial_types$preload) %>%
+  select(record, trial_index, raw) %>%
+  process_records(.using = parse_preload) %>%
   unnest(processed)
 
-d %>% 
-  filter(trial_type == "html-button-response") %>% 
-  mutate(processed = map(raw, ~parse_html_button_response(.x))) %>% 
+d %>%
+  filter(trial_type == trial_types$html_button_response) %>%
+  select(record, trial_index, raw) %>%
+  process_records(.using = parse_html_button_response) %>%
   unnest(processed)
 
-d %>% 
-  filter(trial_type == "video-button-response") %>% 
-  mutate(processed = map(raw, ~parse_video_button_response(.x))) %>% 
+d %>%
+  filter(trial_type == trial_types$video_button_response) %>%
+  select(record, trial_index, raw) %>%
+  process_records(.using = parse_video_button_response) %>%
   unnest(processed)
 
 ```
