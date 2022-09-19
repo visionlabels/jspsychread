@@ -2,27 +2,28 @@
 % Please edit documentation in R/parsers.R
 \name{parse_html_keyboard_response}
 \alias{parse_html_keyboard_response}
-\title{jspsych-html-keyboard-response parser}
+\title{html-keyboard-response parser}
 \usage{
 parse_html_keyboard_response(d)
 }
 \arguments{
-\item{d}{List with unprocessed trial data
-
-response    (numeric) -    Indicates which key the subject pressed.
-rt    (numeric) -    The response time in milliseconds for the subject to make a response. The time is measured from when the stimulus first appears on the screen until the subject's response.
-stimulus    (string) - The HTML content that was displayed on the screen.}
+\item{d}{List with unprocessed trial data}
 }
 \value{
-Single row tibble with results
+Single row tibble with results. Check \href{https://www.jspsych.org/7.3/plugins/html-keyboard-response}{jsPsych documentation}
+for the list of available variables.
 }
 \description{
-https://www.jspsych.org/plugins/jspsych-html-keyboard-response/
+https://www.jspsych.org/7.3/plugins/html-keyboard-response/
 }
 \examples{
-fn <- system.file("testdata", "jspsych-html-keyboard-response.json", package = "jspsychread")
+\dontrun{
+fn <- demo_file("jspsych-html-keyboard-response.json")
 d  <- read_jspsych(fn)
-d$raw \%>\%
-  purrr::map(~ parse_html_keyboard_response(.x)) \%>\%
-  dplyr::bind_rows()
+d \%>\%
+  filter(trial_type == trial_types$html_keyboard_response) \%>\%
+  select(record, trial_index, raw) \%>\%
+  process_records(.using = parse_html_keyboard_response) \%>\%
+  unnest(processed)
+}
 }

@@ -1,0 +1,23 @@
+[
+	{
+		"success": true,
+		"timeout": false,
+		"failed_images": [],
+		"failed_audio": [],
+		"failed_video": [],
+		"trial_type": "preload",
+		"trial_index": 0,
+		"time_elapsed": 2,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 399,
+		"correct": true,
+		"stimulus": "img/happy_face_1.jpg",
+		"response": "h",
+		"trial_type": "categorize-image",
+		"trial_index": 1,
+		"time_elapsed": 2405,
+		"internal_node_id": "0.0-1.0"
+	}
+]

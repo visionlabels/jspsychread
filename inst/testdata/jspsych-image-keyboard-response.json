@@ -7,7 +7,7 @@
 		"failed_video": [],
 		"trial_type": "preload",
 		"trial_index": 0,
-		"time_elapsed": 4,
+		"time_elapsed": 5,
 		"internal_node_id": "0.0-0.0"
 	},
 	{
@@ -16,7 +16,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 1,
-		"time_elapsed": 308,
+		"time_elapsed": 311,
 		"internal_node_id": "0.0-1.0-0.0"
 	},
 	{
@@ -25,7 +25,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 2,
-		"time_elapsed": 611,
+		"time_elapsed": 617,
 		"internal_node_id": "0.0-1.0-0.1"
 	},
 	{
@@ -34,7 +34,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 3,
-		"time_elapsed": 918,
+		"time_elapsed": 922,
 		"internal_node_id": "0.0-1.0-0.2"
 	},
 	{
@@ -43,7 +43,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 4,
-		"time_elapsed": 1224,
+		"time_elapsed": 1226,
 		"internal_node_id": "0.0-1.0-0.3"
 	},
 	{
@@ -52,7 +52,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 5,
-		"time_elapsed": 1527,
+		"time_elapsed": 1530,
 		"internal_node_id": "0.0-1.0-0.4"
 	},
 	{
@@ -61,7 +61,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 6,
-		"time_elapsed": 1832,
+		"time_elapsed": 1834,
 		"internal_node_id": "0.0-1.0-0.5"
 	},
 	{
@@ -70,7 +70,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 7,
-		"time_elapsed": 2140,
+		"time_elapsed": 2138,
 		"internal_node_id": "0.0-1.0-0.6"
 	},
 	{
@@ -79,7 +79,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 8,
-		"time_elapsed": 2446,
+		"time_elapsed": 2442,
 		"internal_node_id": "0.0-1.0-0.7"
 	},
 	{
@@ -88,7 +88,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 9,
-		"time_elapsed": 2755,
+		"time_elapsed": 2746,
 		"internal_node_id": "0.0-1.0-0.8"
 	},
 	{
@@ -97,7 +97,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 10,
-		"time_elapsed": 3057,
+		"time_elapsed": 3049,
 		"internal_node_id": "0.0-1.0-0.9"
 	},
 	{
@@ -106,7 +106,7 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 11,
-		"time_elapsed": 3365,
+		"time_elapsed": 3354,
 		"internal_node_id": "0.0-1.0-0.10"
 	},
 	{
@@ -115,25 +115,25 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 12,
-		"time_elapsed": 3672,
+		"time_elapsed": 3658,
 		"internal_node_id": "0.0-1.0-0.11"
 	},
 	{
-		"rt": 2350.7000000029802,
+		"rt": 2115,
 		"stimulus": "img/happy_face_1.jpg",
 		"response": "y",
 		"trial_type": "image-keyboard-response",
 		"trial_index": 13,
-		"time_elapsed": 6024,
+		"time_elapsed": 5776,
 		"internal_node_id": "0.0-2.0"
 	},
 	{
-		"rt": 1065.5999999940395,
+		"rt": 997,
 		"stimulus": "img/happy_face_2.jpg",
 		"response": "y",
 		"trial_type": "image-keyboard-response",
 		"trial_index": 14,
-		"time_elapsed": 7091,
+		"time_elapsed": 6775,
 		"internal_node_id": "0.0-3.0"
 	},
 	{
@@ -142,16 +142,16 @@
 		"response": null,
 		"trial_type": "image-keyboard-response",
 		"trial_index": 15,
-		"time_elapsed": 9096,
+		"time_elapsed": 8778,
 		"internal_node_id": "0.0-4.0"
 	},
 	{
-		"rt": 2614.300000011921,
+		"rt": 2478,
 		"stimulus": "img/happy_face_4.jpg",
 		"response": "y",
 		"trial_type": "image-keyboard-response",
 		"trial_index": 16,
-		"time_elapsed": 11712,
+		"time_elapsed": 11259,
 		"internal_node_id": "0.0-5.0"
 	}
 ]

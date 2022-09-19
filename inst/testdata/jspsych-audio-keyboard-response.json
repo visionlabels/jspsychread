@@ -7,34 +7,34 @@
 		"failed_video": [],
 		"trial_type": "preload",
 		"trial_index": 0,
-		"time_elapsed": 22,
+		"time_elapsed": 21,
 		"internal_node_id": "0.0-0.0"
 	},
 	{
-		"rt": 1357,
+		"rt": 1531,
 		"stimulus": "<div style=\"max-width:600px;\"><p>Some browsers now require the user to interact with a page before it can play audio. Clicking the button below counts as an interaction.</p><p>Be aware of this when planning audio experiments if you want the first trial to include audio.</p></div>",
 		"response": 0,
 		"trial_type": "html-button-response",
 		"trial_index": 1,
-		"time_elapsed": 1634,
+		"time_elapsed": 1809,
 		"internal_node_id": "0.0-1.0"
 	},
 	{
-		"rt": 2667.300000011921,
+		"rt": 1836,
 		"stimulus": "sound/speech_blue.mp3",
 		"response": "y",
 		"trial_type": "audio-keyboard-response",
 		"trial_index": 2,
-		"time_elapsed": 4560,
+		"time_elapsed": 3903,
 		"internal_node_id": "0.0-2.0"
 	},
 	{
-		"rt": 1367.4000000059605,
+		"rt": 1267,
 		"stimulus": "sound/speech_green.mp3",
 		"response": "n",
 		"trial_type": "audio-keyboard-response",
 		"trial_index": 3,
-		"time_elapsed": 6184,
+		"time_elapsed": 5427,
 		"internal_node_id": "0.0-3.0"
 	},
 	{
@@ -43,16 +43,16 @@
 		"response": null,
 		"trial_type": "audio-keyboard-response",
 		"trial_index": 4,
-		"time_elapsed": 8446,
+		"time_elapsed": 7682,
 		"internal_node_id": "0.0-4.0"
 	},
 	{
-		"rt": 3467.9000000059605,
+		"rt": 2062,
 		"stimulus": "sound/speech_joke.mp3",
 		"response": " ",
 		"trial_type": "audio-keyboard-response",
 		"trial_index": 5,
-		"time_elapsed": 18904,
+		"time_elapsed": 16729,
 		"internal_node_id": "0.0-5.0"
 	}
 ]

@@ -13,7 +13,15 @@ read_jspsych(filepath, single = T)
 or multiple records (each on separate line)}
 }
 \value{
-a \link[tibble:tibble-package]{tibble} with each trial/plugin result as a separate line
+A \link[tibble:tibble-package]{tibble} with each trial/plugin result
+as a separate line. The tibble features following columns:
+\itemize{
+\item \code{trial_type}	(string)	- The name of the plugin used to run the trial.
+\item \code{trial_index} (numeric) - The index of the current trial across the whole experiment.
+\item \code{time_elapsed}	(numeric)	- The number of milliseconds between the start of the experiment and when the trial ended.
+\item \code{internal_node_id}	(string) - A string identifier for the current TimelineNode.
+\item \code{raw} (list) - list column with all plugin data
+}
 }
 \description{
 By default, the code expects a file with a single JSON structure
@@ -21,4 +29,10 @@ with white spaces and line delimiters \code{(single = T)}.
 The alternative behaviour \code{(single = F)} expects a format with multiple
 JSON records, each in a single line.
 Results stored in JATOS server follow this structure.
+}
+\examples{
+read_jspsych(demo_file("jspsych-html-button-response.json"))
+}
+\seealso{
+\code{\link[=parse_single_record]{parse_single_record()}}
 }

@@ -10,10 +10,13 @@ parse_single_record(jsondata)
 \item{jsondata}{Data in JSON format
 
 Currently
-\code{trial_type}    (string)    - The name of the plugin used to run the trial.
-\code{trial_index} (numeric) - The index of the current trial across the whole experiment.
-\code{time_elapsed}    (numeric)    - The number of milliseconds between the start of the experiment and when the trial ended.
-\code{internal_node_id}    (string) - A string identifier for the current TimelineNode.}
+\itemize{
+\item \code{trial_type}    (string)    - The name of the plugin used to run the trial.
+\item \code{trial_index} (numeric) - The index of the current trial across the whole experiment.
+\item \code{time_elapsed}    (numeric)    - The number of milliseconds between the start of the experiment and when the trial ended.
+\item \code{internal_node_id}    (string) - A string identifier for the current TimelineNode.
+\item \code{raw} (list) - list column with all plugin data
+}}
 }
 \value{
 a \link[tibble:tibble-package]{tibble} with generic data from each trial/plugin result on separate lines

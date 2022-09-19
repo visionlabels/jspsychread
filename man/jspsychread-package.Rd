@@ -4,9 +4,9 @@
 \name{jspsychread-package}
 \alias{jspsychread}
 \alias{jspsychread-package}
-\title{jspsychread: What the Package Does (One Line, Title Case)}
+\title{jspsychread: Read jsPsych data}
 \description{
-What the package does (one paragraph).
+The package helps to process JSON data collected using jsPsych scripts.
 }
 \seealso{
 Useful links:

@@ -1,0 +1,23 @@
+[
+	{
+		"response": [
+			"hamster",
+			"Europe",
+			"Asia"
+		],
+		"trial_type": "cloze",
+		"trial_index": 0,
+		"time_elapsed": 36177,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"response": [
+			"4",
+			"3"
+		],
+		"trial_type": "cloze",
+		"trial_index": 1,
+		"time_elapsed": 52907,
+		"internal_node_id": "0.0-1.0"
+	}
+]

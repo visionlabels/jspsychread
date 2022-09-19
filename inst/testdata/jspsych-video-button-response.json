@@ -11,34 +11,34 @@
 		"internal_node_id": "0.0-0.0"
 	},
 	{
-		"rt": 7536.70000000298,
+		"rt": 2271,
 		"stimulus": "<div style=\"max-width:600px;\"><p>Some browsers now require that a user interacts with a web page before video or audio content will autoplay. Clicking the button below satisfies that requirement.</p><p>Without this trial, the video will load but not play.</p></div>",
 		"response": 0,
 		"trial_type": "html-button-response",
 		"trial_index": 1,
-		"time_elapsed": 7538,
+		"time_elapsed": 2274,
 		"internal_node_id": "0.0-1.0"
 	},
 	{
-		"rt": 4245.29999999702,
+		"rt": 2743,
 		"stimulus": [
 			"video/sample_video.mp4"
 		],
 		"response": 0,
 		"trial_type": "video-button-response",
 		"trial_index": 2,
-		"time_elapsed": 11788,
+		"time_elapsed": 5022,
 		"internal_node_id": "0.0-2.0"
 	},
 	{
-		"rt": 15047.5,
+		"rt": 14744,
 		"stimulus": [
 			"video/sample_video.mp4"
 		],
-		"response": 1,
+		"response": 0,
 		"trial_type": "video-button-response",
 		"trial_index": 3,
-		"time_elapsed": 26837,
+		"time_elapsed": 19772,
 		"internal_node_id": "0.0-3.0"
 	}
 ]

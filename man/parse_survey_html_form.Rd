@@ -2,26 +2,33 @@
 % Please edit documentation in R/parsers.R
 \name{parse_survey_html_form}
 \alias{parse_survey_html_form}
-\title{jspsych-survey-html-form parser}
+\title{survey-html-form parser}
 \usage{
 parse_survey_html_form(d)
 }
 \arguments{
-\item{d}{List with unprocessed trial data
-
-response    object    An object containing the response for each input. The object will have a separate key (variable) for the response to each input, with each variable being named after its corresponding input element. Each response is a string containing whatever the subject answered for this particular input. This will be encoded as a JSON string when data is saved using the .json() or .csv() functions.
-rt    numeric    The response time in milliseconds for the subject to make a response.}
+\item{d}{List with unprocessed trial data}
 }
 \value{
-Single row tibble with results
+Single row tibble with results. Check \href{https://www.jspsych.org/7.3/plugins/survey-html-form}{jsPsych documentation}
+for the list of available variables.
 }
 \description{
-https://www.jspsych.org/plugins/jspsych-survey-html-form/
+https://www.jspsych.org/7.3/plugins/survey-html-form
 }
 \examples{
-fn <- system.file("testdata", "jspsych-survey-html-form.json", package = "jspsychread")
+\dontrun{
+fn <- demo_file("jspsych-survey-html-form.json")
 d  <- read_jspsych(fn)
-d$raw \%>\%
-  purrr::map(~ parse_survey_html_form(.x)) \%>\%
-  dplyr::bind_rows()
+trials <-
+  d \%>\%
+  filter(trial_type == trial_types$survey_html_form) \%>\%
+  select(record, trial_index, raw) \%>\%
+  process_records(.using = parse_survey_html_form) \%>\%
+  unnest(processed)
+trials \%>\%
+  filter(trial_index == 0) \%>\%
+  select(-raw) \%>\%
+  mutate(bind_rows(response))
+}
 }

@@ -2,19 +2,29 @@
 % Please edit documentation in R/parsers.R
 \name{parse_instructions}
 \alias{parse_instructions}
-\title{jspsych-instructions parse}
+\title{instructions parser}
 \usage{
 parse_instructions(d)
 }
 \arguments{
-\item{d}{List with unprocessed trial data
-
-view_history    array    An array containing the order of pages the subject viewed (including when the subject returned to previous pages) and the time spent viewing each page. Each object in the array represents a single page view, and contains keys called page_index (the page number, starting with 0) and viewing_time (duration of the page view). This will be encoded as a JSON string when data is saved using the .json() or .csv() functions.
-rt    numeric    The response time in milliseconds for the subject to view all of the pages.}
+\item{d}{List with unprocessed trial data}
 }
 \value{
-Single row tibble with results
+Single row tibble with results. Check \href{https://www.jspsych.org/7.3/plugins/instructions}{jsPsych documentation}
+for the list of available variables.
 }
 \description{
-https://www.jspsych.org/plugins/jspsych-instructions/
+https://www.jspsych.org/7.3/plugins/instructions
+}
+\examples{
+\dontrun{
+fn <- demo_file("jspsych-instructions.json")
+d  <- read_jspsych(fn)
+d \%>\%
+  filter(trial_type == trial_types$instructions) \%>\%
+  select(record, trial_index, raw) \%>\%
+  process_records(.using = parse_instructions) \%>\%
+  unnest(processed) \%>\%
+  unnest(view_history) # for page data
+}
 }

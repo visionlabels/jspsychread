@@ -1,16 +1,14 @@
 [
 	{
-		"rt": 20453.5,
+		"rt": 7404,
 		"response": {
 			"Colors": [
 				"Red",
-				"Blue",
-				"Black"
+				"Yellow"
 			],
 			"Foods": [
 				"Apples",
-				"Bananas",
-				"Carrots"
+				"Bananas"
 			]
 		},
 		"question_order": [
@@ -19,7 +17,7 @@
 		],
 		"trial_type": "survey-multi-select",
 		"trial_index": 0,
-		"time_elapsed": 20457,
+		"time_elapsed": 7407,
 		"internal_node_id": "0.0-0.0"
 	}
 ]

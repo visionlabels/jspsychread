@@ -2,20 +2,28 @@
 % Please edit documentation in R/parsers.R
 \name{parse_image_button_response}
 \alias{parse_image_button_response}
-\title{jspsych-image-button-response parser}
+\title{image-button-response parser}
 \usage{
 parse_image_button_response(d)
 }
 \arguments{
-\item{d}{List with unprocessed trial data
-
-rt    (numeric) -    The response time in milliseconds for the subject to make a response. The time is measured from when the stimulus first appears on the screen until the subject's response.
-response    (numeric) -    Indicates which button the subject pressed. The first button in the choices array is 0, the second is 1, and so on.
-stimulus    (string) - The path of the image that was displayed.}
+\item{d}{List with unprocessed trial data}
 }
 \value{
-Single row tibble with results
+Single row tibble with results. Check \href{https://www.jspsych.org/7.3/plugins/image-button-response}{jsPsych documentation}
+for the list of available variables.
 }
 \description{
-https://www.jspsych.org/plugins/jspsych-image-button-response/
+https://www.jspsych.org/7.3/plugins/image-button-response
+}
+\examples{
+\dontrun{
+fn <- demo_file("jspsych-image-button-response.json")
+d  <- read_jspsych(fn)
+d \%>\%
+  filter(trial_type == trial_types$image_button_response) \%>\%
+  select(record, trial_index, raw) \%>\%
+  process_records(.using = parse_image_button_response) \%>\%
+  unnest(processed)
+}
 }

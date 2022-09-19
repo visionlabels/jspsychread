@@ -1,0 +1,12 @@
+[
+	{
+		"rt": 1144,
+		"correct": true,
+		"stimulus": "<div style=\"margin: auto; width: 200px; height: 200px; background-color: blue;\"></div>",
+		"response": "b",
+		"trial_type": "categorize-html",
+		"trial_index": 0,
+		"time_elapsed": 3149,
+		"internal_node_id": "0.0-0.0"
+	}
+]

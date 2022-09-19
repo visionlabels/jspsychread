@@ -1,0 +1,20 @@
+[
+	{
+		"rt": 7839,
+		"stimulus": "<div style=\"display: block; margin: auto; height: 300px; width: 300px; position: relative;\"><div style=\"display: block; position: absolute; top: 45px; left:45px; background-color: #000000; width: 210px; height: 210px;\"></div></div>",
+		"response": "c",
+		"trial_type": "html-keyboard-response",
+		"trial_index": 0,
+		"time_elapsed": 7841,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 8885,
+		"final_value": 0.6500000000000001,
+		"start_value": 0.5,
+		"trial_type": "reconstruction",
+		"trial_index": 1,
+		"time_elapsed": 17983,
+		"internal_node_id": "0.0-1.0"
+	}
+]

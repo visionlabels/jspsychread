@@ -7,43 +7,43 @@
 		"failed_video": [],
 		"trial_type": "preload",
 		"trial_index": 0,
-		"time_elapsed": 16,
+		"time_elapsed": 17,
 		"internal_node_id": "0.0-0.0"
 	},
 	{
-		"rt": 11172,
+		"rt": 5827,
 		"stimulus": "<div style=\"max-width:600px;\"><p>Some browsers now require the user to interact with a page before it can play audio. Clicking the button below counts as an interaction.</p><p>Be aware of this when planning audio experiments if you want the first trial to include audio.</p></div>",
 		"response": 0,
 		"trial_type": "html-button-response",
 		"trial_index": 1,
-		"time_elapsed": 11188,
+		"time_elapsed": 5845,
 		"internal_node_id": "0.0-1.0"
 	},
 	{
-		"rt": 2171.2999999970198,
+		"rt": 1712,
 		"stimulus": "sound/speech_green.mp3",
 		"response": 0,
 		"trial_type": "audio-button-response",
 		"trial_index": 2,
-		"time_elapsed": 13362,
+		"time_elapsed": 7561,
 		"internal_node_id": "0.0-2.0"
 	},
 	{
-		"rt": 1284.6000000089407,
+		"rt": 1181,
 		"stimulus": "sound/speech_red.mp3",
 		"response": 2,
 		"trial_type": "audio-button-response",
 		"trial_index": 3,
-		"time_elapsed": 14648,
+		"time_elapsed": 8743,
 		"internal_node_id": "0.0-3.0"
 	},
 	{
-		"rt": 8615.90000000596,
+		"rt": 9048,
 		"stimulus": "sound/speech_joke.mp3",
 		"response": 1,
 		"trial_type": "audio-button-response",
 		"trial_index": 4,
-		"time_elapsed": 23266,
+		"time_elapsed": 17793,
 		"internal_node_id": "0.0-4.0"
 	}
 ]

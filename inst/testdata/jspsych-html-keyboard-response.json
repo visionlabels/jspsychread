@@ -1,20 +1,20 @@
 [
 	{
-		"rt": 4488.5999999940395,
+		"rt": 7443,
 		"stimulus": "<p style=\"color: red; font-size: 48px; font-weight: bold;\">GREEN</p>",
 		"response": "n",
 		"trial_type": "html-keyboard-response",
 		"trial_index": 0,
-		"time_elapsed": 4490,
+		"time_elapsed": 7445,
 		"internal_node_id": "0.0-0.0"
 	},
 	{
-		"rt": 3055.5,
+		"rt": 2436,
 		"stimulus": "<p style=\"color: red; font-size: 48px; font-weight: bold;\">RED</p>",
 		"response": "y",
 		"trial_type": "html-keyboard-response",
 		"trial_index": 1,
-		"time_elapsed": 7799,
+		"time_elapsed": 9882,
 		"internal_node_id": "0.0-1.0"
 	},
 	{
@@ -23,7 +23,7 @@
 		"response": null,
 		"trial_type": "html-keyboard-response",
 		"trial_index": 2,
-		"time_elapsed": 10061,
+		"time_elapsed": 11884,
 		"internal_node_id": "0.0-2.0"
 	}
 ]

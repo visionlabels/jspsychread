@@ -1,12 +1,12 @@
 [
 	{
-		"rt": 6327.600000008941,
+		"rt": 4770,
 		"stimulus": "<div style=\"margin: 50px auto; width: 100px; height: 100px; background-color: rgb(46, 26, 122);\"></div>",
 		"slider_start": 50,
-		"response": 32,
+		"response": 15,
 		"trial_type": "html-slider-response",
 		"trial_index": 0,
-		"time_elapsed": 6330,
+		"time_elapsed": 4775,
 		"internal_node_id": "0.0-0.0"
 	},
 	{
@@ -16,17 +16,17 @@
 		"response": null,
 		"trial_type": "html-slider-response",
 		"trial_index": 1,
-		"time_elapsed": 11590,
+		"time_elapsed": 10028,
 		"internal_node_id": "0.0-1.0"
 	},
 	{
-		"rt": 4411.0999999940395,
+		"rt": 4558,
 		"stimulus": "<div style=\"margin: 50px auto; width: 100px; height: 100px; background-color: rgb(63, 17, 129)\"></div>",
 		"slider_start": 50,
-		"response": 26,
+		"response": 68,
 		"trial_type": "html-slider-response",
 		"trial_index": 2,
-		"time_elapsed": 16259,
+		"time_elapsed": 14840,
 		"internal_node_id": "0.0-2.0"
 	}
 ]

@@ -1,22 +1,22 @@
 [
 	{
-		"rt": 7366.29999999702,
-		"response": 62,
+		"rt": 7539,
+		"response": 27,
 		"slider_start": 50,
 		"color1": "#FF3333",
 		"color2": "#FF6A33",
 		"trial_type": "canvas-slider-response",
 		"trial_index": 0,
-		"time_elapsed": 7370,
+		"time_elapsed": 7548,
 		"internal_node_id": "0.0-0.0"
 	},
 	{
-		"rt": 4685.699999988079,
-		"response": 92,
+		"rt": 3345,
+		"response": 80,
 		"slider_start": 50,
 		"trial_type": "canvas-slider-response",
 		"trial_index": 1,
-		"time_elapsed": 12058,
+		"time_elapsed": 10895,
 		"internal_node_id": "0.0-1.0",
 		"color1": "darkred",
 		"color2": "cyan"

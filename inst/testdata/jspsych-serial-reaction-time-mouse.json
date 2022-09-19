@@ -1,6 +1,6 @@
 [
 	{
-		"rt": 2260.5999999940395,
+		"rt": 2198,
 		"grid": [
 			[
 				1,
@@ -84,21 +84,21 @@
 			]
 		],
 		"target": [
-			5,
+			2,
 			6
 		],
 		"response": [
-			5,
+			2,
 			6
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 0,
-		"time_elapsed": 2263,
+		"time_elapsed": 2200,
 		"internal_node_id": "0.0-0.0-0.0"
 	},
 	{
-		"rt": 956.2999999970198,
+		"rt": 813,
 		"grid": [
 			[
 				1,
@@ -182,21 +182,21 @@
 			]
 		],
 		"target": [
-			6,
-			5
+			3,
+			6
 		],
 		"response": [
-			6,
-			5
+			3,
+			6
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 1,
-		"time_elapsed": 3223,
+		"time_elapsed": 3015,
 		"internal_node_id": "0.0-0.0-1.0"
 	},
 	{
-		"rt": 973.2999999970198,
+		"rt": 764,
 		"grid": [
 			[
 				1,
@@ -280,21 +280,21 @@
 			]
 		],
 		"target": [
-			3,
-			1
+			6,
+			2
 		],
 		"response": [
-			3,
-			1
+			6,
+			2
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 2,
-		"time_elapsed": 4199,
+		"time_elapsed": 3782,
 		"internal_node_id": "0.0-0.0-0.1"
 	},
 	{
-		"rt": 927.0999999940395,
+		"rt": 730,
 		"grid": [
 			[
 				1,
@@ -378,21 +378,21 @@
 			]
 		],
 		"target": [
-			2,
-			0
+			7,
+			1
 		],
 		"response": [
-			2,
-			0
+			7,
+			1
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 3,
-		"time_elapsed": 5128,
+		"time_elapsed": 4515,
 		"internal_node_id": "0.0-0.0-1.1"
 	},
 	{
-		"rt": 1045.7000000029802,
+		"rt": 881,
 		"grid": [
 			[
 				1,
@@ -476,21 +476,21 @@
 			]
 		],
 		"target": [
-			4,
+			1,
 			3
 		],
 		"response": [
-			4,
+			1,
 			3
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 4,
-		"time_elapsed": 6177,
+		"time_elapsed": 5398,
 		"internal_node_id": "0.0-0.0-0.2"
 	},
 	{
-		"rt": 1038.9000000059605,
+		"rt": 648,
 		"grid": [
 			[
 				1,
@@ -574,21 +574,21 @@
 			]
 		],
 		"target": [
-			5,
-			3
+			2,
+			4
 		],
 		"response": [
-			5,
-			3
+			2,
+			4
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 5,
-		"time_elapsed": 7218,
+		"time_elapsed": 6048,
 		"internal_node_id": "0.0-0.0-1.2"
 	},
 	{
-		"rt": 1250.7999999970198,
+		"rt": 765,
 		"grid": [
 			[
 				1,
@@ -672,21 +672,21 @@
 			]
 		],
 		"target": [
-			2,
-			2
+			4,
+			5
 		],
 		"response": [
-			2,
-			2
+			4,
+			5
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 6,
-		"time_elapsed": 8472,
+		"time_elapsed": 6815,
 		"internal_node_id": "0.0-0.0-0.3"
 	},
 	{
-		"rt": 926.5999999940395,
+		"rt": 647,
 		"grid": [
 			[
 				1,
@@ -770,21 +770,21 @@
 			]
 		],
 		"target": [
-			2,
-			1
+			3,
+			5
 		],
 		"response": [
-			2,
-			1
+			3,
+			5
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 7,
-		"time_elapsed": 9400,
+		"time_elapsed": 7465,
 		"internal_node_id": "0.0-0.0-1.3"
 	},
 	{
-		"rt": 1144,
+		"rt": 831,
 		"grid": [
 			[
 				1,
@@ -868,21 +868,21 @@
 			]
 		],
 		"target": [
-			6,
-			5
+			1,
+			3
 		],
 		"response": [
-			6,
-			5
+			1,
+			3
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 8,
-		"time_elapsed": 10547,
+		"time_elapsed": 8298,
 		"internal_node_id": "0.0-0.0-0.4"
 	},
 	{
-		"rt": 933.2000000029802,
+		"rt": 664,
 		"grid": [
 			[
 				1,
@@ -966,21 +966,21 @@
 			]
 		],
 		"target": [
-			7,
-			6
+			0,
+			2
 		],
 		"response": [
-			7,
-			6
+			0,
+			2
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 9,
-		"time_elapsed": 11484,
+		"time_elapsed": 8965,
 		"internal_node_id": "0.0-0.0-1.4"
 	},
 	{
-		"rt": 1128.9000000059605,
+		"rt": 764,
 		"grid": [
 			[
 				1,
@@ -1064,21 +1064,21 @@
 			]
 		],
 		"target": [
-			5,
-			1
+			2,
+			2
 		],
 		"response": [
-			5,
-			1
+			2,
+			2
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 10,
-		"time_elapsed": 12615,
+		"time_elapsed": 9732,
 		"internal_node_id": "0.0-0.0-0.5"
 	},
 	{
-		"rt": 939.8999999910593,
+		"rt": 731,
 		"grid": [
 			[
 				1,
@@ -1162,17 +1162,17 @@
 			]
 		],
 		"target": [
-			4,
-			1
+			1,
+			3
 		],
 		"response": [
-			4,
-			1
+			1,
+			3
 		],
 		"correct": true,
 		"trial_type": "serial-reaction-time-mouse",
 		"trial_index": 11,
-		"time_elapsed": 13559,
+		"time_elapsed": 10465,
 		"internal_node_id": "0.0-0.0-1.5"
 	}
 ]

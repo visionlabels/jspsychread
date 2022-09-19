@@ -10,10 +10,20 @@
 #' @param single Indicates whether the file contains a single record
 #' or multiple records (each on separate line)
 #'
-#' @return a [tibble][tibble::tibble-package] with each trial/plugin result as a separate line
+#' @return A [tibble][tibble::tibble-package] with each trial/plugin result
+#' as a separate line. The tibble features following columns:
+#'
+#' - `trial_type`	(string)	- The name of the plugin used to run the trial.
+#' - `trial_index` (numeric) - The index of the current trial across the whole experiment.
+#' - `time_elapsed`	(numeric)	- The number of milliseconds between the start of the experiment and when the trial ended.
+#' - `internal_node_id`	(string) - A string identifier for the current TimelineNode.
+#' - `raw` (list) - list column with all plugin data
+#'
+#' @seealso [parse_single_record()]
 #' @export
 #'
 #' @examples
+#' read_jspsych(demo_file("jspsych-html-button-response.json"))
 read_jspsych <- function(filepath, single = T) {
   results <- list()
   i <- 1
@@ -29,11 +39,6 @@ read_jspsych <- function(filepath, single = T) {
         break
       }
       jd <- jsonlite::parse_json(line)
-      # jd_parsed <- parse_results_for_one_person(jd, parser = parser)
-      # jd_parsed$meta <- jd_parsed$meta %>%
-      #   mutate(results_id = i) %>% select(results_id, everything())
-      # jd_parsed$results <- jd_parsed$results %>%
-      #   mutate(results_id = i) %>% select(results_id, everything())
       results[[i]] <- parse_single_record(jd)
       i <- i + 1
     }
@@ -43,3 +48,4 @@ read_jspsych <- function(filepath, single = T) {
     dplyr::bind_rows(.id = "record") %>%
     dplyr::mutate(record = as.numeric(.data$record))
 }
+

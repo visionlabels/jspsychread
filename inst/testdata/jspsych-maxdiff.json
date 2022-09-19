@@ -1,0 +1,32 @@
+[
+	{
+		"rt": 18750,
+		"labels": {
+			"left": "Most Preferred",
+			"right": "Least Preferred"
+		},
+		"response": {
+			"left": "pear",
+			"right": "apple"
+		},
+		"trial_type": "maxdiff",
+		"trial_index": 0,
+		"time_elapsed": 18753,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 9441,
+		"labels": {
+			"left": "Most Preferred",
+			"right": "Least Preferred"
+		},
+		"response": {
+			"left": "watermelon",
+			"right": "kiwi"
+		},
+		"trial_type": "maxdiff",
+		"trial_index": 1,
+		"time_elapsed": 28200,
+		"internal_node_id": "0.0-1.0"
+	}
+]

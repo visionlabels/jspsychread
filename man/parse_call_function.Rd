@@ -2,25 +2,28 @@
 % Please edit documentation in R/parsers.R
 \name{parse_call_function}
 \alias{parse_call_function}
-\title{jspsych-call-function parser}
+\title{call-function parser}
 \usage{
 parse_call_function(d)
 }
 \arguments{
-\item{d}{List with unprocessed trial data
-
-value    any    The return value of the called function.}
+\item{d}{List with unprocessed trial data}
 }
 \value{
-Single row tibble with results
+Single row tibble with results. Check \href{https://www.jspsych.org/7.3/plugins/call-function}{jsPsych documentation}
+for the list of available variables.
 }
 \description{
-https://www.jspsych.org/plugins/jspsych-call-function/
+https://www.jspsych.org/7.3/plugins/call-function
 }
 \examples{
-fn <- system.file("testdata", "jspsych-call-function.json", package = "jspsychread")
+\dontrun{
+fn <- demo_file("jspsych-call-function.json")
 d  <- read_jspsych(fn)
-d$raw \%>\%
-  purrr::map(~ parse_call_function(.x)) \%>\%
-  dplyr::bind_rows()
+d \%>\%
+  filter(trial_type == trial_types$call_function) \%>\%
+  select(record, trial_index, raw) \%>\%
+  process_records(.using = parse_call_function) \%>\%
+  unnest(processed)
+}
 }

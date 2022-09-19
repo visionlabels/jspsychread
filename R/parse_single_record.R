@@ -3,15 +3,14 @@
 #' @param jsondata Data in JSON format
 #'
 #' Currently
-#' `trial_type`	(string)	- The name of the plugin used to run the trial.
-#' `trial_index` (numeric) - The index of the current trial across the whole experiment.
-#' `time_elapsed`	(numeric)	- The number of milliseconds between the start of the experiment and when the trial ended.
-#' `internal_node_id`	(string) - A string identifier for the current TimelineNode.
+#' - `trial_type`	(string)	- The name of the plugin used to run the trial.
+#' - `trial_index` (numeric) - The index of the current trial across the whole experiment.
+#' - `time_elapsed`	(numeric)	- The number of milliseconds between the start of the experiment and when the trial ended.
+#' - `internal_node_id`	(string) - A string identifier for the current TimelineNode.
+#' - `raw` (list) - list column with all plugin data
 #'
 #' @return a [tibble][tibble::tibble-package] with generic data from each trial/plugin result on separate lines
 #' @export
-#'
-#' @examples
 parse_single_record <- function(jsondata) {
   trial_list <- list()
   for (i in 1:length(jsondata)) {

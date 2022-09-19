@@ -1,0 +1,27 @@
+[
+	{
+		"success": true,
+		"timeout": false,
+		"failed_images": [],
+		"failed_audio": [],
+		"failed_video": [],
+		"trial_type": "preload",
+		"trial_index": 0,
+		"time_elapsed": 5,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 2973,
+		"answer": "different",
+		"correct": true,
+		"stimulus": [
+			"img/happy_face_1.jpg",
+			"img/sad_face_3.jpg"
+		],
+		"response": "d",
+		"trial_type": "same-different-image",
+		"trial_index": 1,
+		"time_elapsed": 4490,
+		"internal_node_id": "0.0-1.0"
+	}
+]

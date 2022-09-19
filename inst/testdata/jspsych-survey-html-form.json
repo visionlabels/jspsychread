@@ -1,6 +1,6 @@
 [
 	{
-		"rt": 12306,
+		"rt": 10326,
 		"response": {
 			"first": "red",
 			"second": "green",
@@ -8,17 +8,17 @@
 		},
 		"trial_type": "survey-html-form",
 		"trial_index": 0,
-		"time_elapsed": 12308,
+		"time_elapsed": 10330,
 		"internal_node_id": "0.0-0.0"
 	},
 	{
-		"rt": 8041,
+		"rt": 4829,
 		"response": {
-			"response": "owl"
+			"fav-bird": "penguin"
 		},
 		"trial_type": "survey-html-form",
 		"trial_index": 1,
-		"time_elapsed": 20351,
+		"time_elapsed": 15161,
 		"internal_node_id": "0.0-1.0"
 	}
 ]

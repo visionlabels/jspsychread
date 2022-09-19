@@ -1,0 +1,16 @@
+[
+	{
+		"rt": 3110,
+		"answer": "same",
+		"correct": true,
+		"stimulus": [
+			"<p>Talkative</p>",
+			"<p>Loquacious</p>"
+		],
+		"response": "s",
+		"trial_type": "same-different-html",
+		"trial_index": 0,
+		"time_elapsed": 4621,
+		"internal_node_id": "0.0-0.0"
+	}
+]

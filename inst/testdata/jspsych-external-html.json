@@ -1,0 +1,28 @@
+[
+	{
+		"rt": 1949,
+		"stimulus": "<p>This is a normal jsPsych trial.</p><p>Note that this example will NOT work if you opened the HTML file directly in the browser<br>(e.g. by double-clicking on it) because the external HTML page will be blocked by CORS policy.</p><p>If you are hosting the files on a server, then the next trial will display an external HTML page.</p><p>Press any key to continue.</p>",
+		"response": " ",
+		"trial_type": "html-keyboard-response",
+		"trial_index": 0,
+		"time_elapsed": 1952,
+		"internal_node_id": "0.0-0.0"
+	},
+	{
+		"rt": 5052,
+		"url": "external_html/simple_consent.html",
+		"trial_type": "external-html",
+		"trial_index": 1,
+		"time_elapsed": 7013,
+		"internal_node_id": "0.0-1.0"
+	},
+	{
+		"rt": 1950,
+		"stimulus": "This is another normal jsPsych trial.",
+		"response": " ",
+		"trial_type": "html-keyboard-response",
+		"trial_index": 2,
+		"time_elapsed": 8965,
+		"internal_node_id": "0.0-2.0"
+	}
+]

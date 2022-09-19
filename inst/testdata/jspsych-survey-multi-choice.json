@@ -1,21 +1,21 @@
 [
 	{
-		"rt": 7276.899999991059,
+		"rt": 5537,
 		"response": {
-			"Vegetables": "Agree",
-			"Fruit": "Strongly Agree"
+			"Vegetables": "Strongly Agree",
+			"Fruit": "Agree"
 		},
 		"question_order": [
-			0,
-			1
+			1,
+			0
 		],
 		"trial_type": "survey-multi-choice",
 		"trial_index": 0,
-		"time_elapsed": 7280,
+		"time_elapsed": 5540,
 		"internal_node_id": "0.0-0.0"
 	},
 	{
-		"rt": 6355,
+		"rt": 4989,
 		"response": {
 			"Q0": "Agree",
 			"Q1": "Strongly Agree"
@@ -26,7 +26,7 @@
 		],
 		"trial_type": "survey-multi-choice",
 		"trial_index": 1,
-		"time_elapsed": 13637,
+		"time_elapsed": 10537,
 		"internal_node_id": "0.0-1.0"
 	}
 ]

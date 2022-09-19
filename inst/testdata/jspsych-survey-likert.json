@@ -1,9 +1,9 @@
 [
 	{
-		"rt": 5906.5,
+		"rt": 6527,
 		"response": {
 			"Vegetables": 3,
-			"Fruit": 4
+			"Fruit": 3
 		},
 		"question_order": [
 			0,
@@ -11,28 +11,28 @@
 		],
 		"trial_type": "survey-likert",
 		"trial_index": 0,
-		"time_elapsed": 5909,
+		"time_elapsed": 6531,
 		"internal_node_id": "0.0-0.0"
 	},
 	{
-		"rt": 13059.59999999404,
+		"rt": 9340,
 		"response": {
-			"Q4": 4,
-			"Q2": 3,
-			"Q3": 2,
+			"Q2": 2,
+			"Q4": 1,
+			"Q0": 3,
 			"Q1": 1,
-			"Q0": 0
+			"Q3": 3
 		},
 		"question_order": [
-			4,
 			2,
-			3,
+			4,
+			0,
 			1,
-			0
+			3
 		],
 		"trial_type": "survey-likert",
 		"trial_index": 1,
-		"time_elapsed": 18973,
+		"time_elapsed": 15880,
 		"internal_node_id": "0.0-1.0"
 	}
 ]
