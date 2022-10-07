@@ -1,0 +1,170 @@
+---
+title: "jspsychread"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{jspsychread}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Getting started 
+
+Many people use the [jsPsych](https://www.jspsych.org/) JavaScript framework 
+to run their online experiments. 
+Regardless of whether you store your results locally or on a dedicated server 
+(e.g., [JATOS](https://www.jatos.org/)), you end up with results stored in JSON format. 
+Although it is possible to work with JSON files in R, 
+the `jspsych` package provides a simplified interface to smooth the import
+and subsequent data manipulations. 
+
+The package will help you to covert the JSON file into the `tibble` format
+used in `dplyr` and many other packages of the `tidyverse`.
+
+### Example data
+
+Let's imagine you collected the data of one person 
+in a simple reaction time experiment.
+You can try the experiment yourself in the 
+[jsPsych tutorial](https://www.jspsych.org/7.3/tutorials/rt-task/#the-final-code).
+
+```{r setup}
+library(tidyverse)
+library(jspsychread)
+
+# example file included in the package
+filename <- demo_file("demo-simple-rt-task.json")
+```
+
+First, let's have a look at the data.
+
+```{r}
+read_lines(filename, n_max = 12) %>% cat(sep = "\n")
+```
+
+We can import the content into R with `read_jspsych` command and 
+we will get the following tibble.
+
+As you can see below, the tibble contains 6 columns. 
+The `record` column a different number for each experiment stored in the file.
+It will be always `1` for a local JSON file 
+(and it is a good idea to change it after the import) 
+or it will be an increasing row of integers (`1, 2, ...`) is reading the data 
+from JATOS server 
+(where you should specify an additional parameter `single = F`).
+
+The next four columns 
+`trial_type`, `trial_index`, `time_elapsed` and `internal_node_id`
+are the compulsory data stored for [every plugin/trial of a jsPsych experiment](https://www.jspsych.org/7.3/overview/plugins/#data-collected-by-all-plugins). 
+We will use `trial_type` to distinguish between the experiment trials and other stuff (e.g., instructions). 
+The values of `trial_index` can be also handy, 
+when you want to work with a particular subset of your trials 
+(training vs experiment, block 1 vs 2). 
+Durations of each trial in milliseconds are stored in `time_elapsed` may be 
+a useful indicator of long waiting times 
+(even if you don't collect a response time for the particular trial or plugin).
+The text stored in `internal_node_id` refers to the hierarchical structure of the experiment.
+
+Although the mentioned columns might already be of your interest, 
+all really interesting information are stored as a list in the final column called `raw`.
+
+```{r}
+d <- read_jspsych(filename)
+
+d
+```
+
+### Expanding the raw data
+
+The data from each plugin differ and thus it make sense to expand them 
+only in a tibble of the trials/plugins of the same time.
+
+As you can see, our experiment contains one `preload` plugin, 
+`r sum(d$trial_type == "html-keyboard-response")` `html-keyboard-response` plugins 
+for instructions and fixation crosses 
+and finally 
+`r sum(d$trial_type == "image-keyboard-response")` `image-keyboard-response` plugins
+for experiment trials.
+
+```{r}
+d %>% count(trial_type)
+```
+
+The data in `raw` are stored as a list, which we can inspect. 
+But later you can see how to convert these list directly into tibbles.
+
+```{r}
+d %>% slice_head(n = 1) %>% pull(raw)
+```
+
+Let's go directly to the experiment trials. 
+For the `filter` command, you can use the string constant, i.e. 
+`trial_type == "image-keyboard-response"` or 
+use the predefined constants in the `trial_tyoes` list and rely on the auto-complete.
+This means: type `trial_types$im`, press `TAB` and choose from the auto-complete drop-dow menu.
+
+```{r}
+de <- 
+  d %>% 
+  filter(trial_type == trial_types$image_keyboard_response)
+
+de
+```
+
+For the conversion to tibble, we use `process_records`. 
+Currently, there is a set of dedicated parsers (all starting with `parse_`)
+which you call with `.using` argument.
+
+```{r}
+dep <-
+  de %>% 
+  # limit the columns to make it more readable
+  select(record, trial_index, raw) %>%
+  process_records(.using = parse_image_keyboard_response) 
+
+dep
+```
+
+This will create a list column `processed`, 
+which can be keep as list column or unnest it.
+
+```{r}
+def <- 
+  dep %>%
+  unnest(processed)
+
+def
+```
+
+Finally, we have our data!
+
+```{r}
+sumtable <-
+  def %>% 
+  mutate(
+    correct = ((response == "j") == (stimulus == "img/orange.png")),
+    colour = str_remove_all(stimulus, "(img/|\\.png)")
+  ) %>% 
+  filter(correct) %>% 
+  group_by(colour) %>% 
+  summarise(mean_rt = mean(rt), sd = sd(rt), n = n())
+
+sumtable
+
+sumtable %>% 
+  ggplot(aes(x = colour, y = mean_rt, 
+             ymin = mean_rt - sd, ymax = mean_rt + sd)) + 
+  geom_pointrange() + 
+  theme_minimal() + 
+  coord_cartesian(ylim = c(0, 1000)) + 
+  labs(x = "Colour", y = "Mean RT")
+```
+
+
+
