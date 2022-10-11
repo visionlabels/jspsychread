@@ -79,7 +79,9 @@ list2_to_matrix <- function(x, byrow = T) {
 #' @examples
 #' demo_file("jspsych-html-button-response.json")
 demo_file <- function(fn) {
-  system.file("testdata", fn, package = "jspsychread")
+  fnx <- system.file("testdata", fn, package = "jspsychread")
+  stopifnot(file.exists(fnx))
+  fnx
 }
 
 # note how to generate file list
