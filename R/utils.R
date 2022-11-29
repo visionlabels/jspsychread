@@ -13,6 +13,32 @@
 single_value <- function(x) { if (is.null(x)) NA else x }
 
 
+#' Typed wrappers for possible null objects
+#'
+#' @param x Object to check
+#'
+#' @description
+#' `v_integer()` converts to integers
+#'
+#' `v_character()` converts to character
+#'
+#' `v_real()` converts to real numbers
+#'
+#' `v_logical()` converts to logical values
+#'
+#' @return The same object or NA if the object is null.
+#' @export
+v_integer <- function(x) { if (is.null(x)) NA_integer_ else as.integer(x)}
+#' @rdname v_integer
+#' @export
+v_character <- function(x) { if (is.null(x)) NA_character_ else as.character(x)}
+#' @rdname v_integer
+#' @export
+v_real <- function(x) { if (is.null(x)) NA_real_ else as.numeric(x)}
+#' @rdname v_integer
+#' @export
+v_logical <- function(x) { if (is.null(x)) NA else as.logical(x)}
+
 #' Convert list of lists into a matrix
 #'
 #' We expect the same representation as in serial-reaction-time-mouse:
