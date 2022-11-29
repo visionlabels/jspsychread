@@ -35,7 +35,9 @@ You can try the experiment yourself in the
 [jsPsych tutorial](https://www.jspsych.org/7.3/tutorials/rt-task/#the-final-code).
 
 ```{r setup}
-library(tidyverse)
+library(dplyr)
+library(tidyr)
+# or library(tidyverse)
 library(jspsychread)
 
 # example file included in the package
@@ -45,7 +47,7 @@ filename <- demo_file("demo-simple-rt-task.json")
 First, let's have a look at the data.
 
 ```{r}
-read_lines(filename, n_max = 12) %>% cat(sep = "\n")
+readLines(filename, n = 12) %>% cat(sep = "\n")
 ```
 
 We can import the content into R with `read_jspsych` command and 
@@ -149,7 +151,7 @@ sumtable <-
   def %>% 
   mutate(
     correct = ((response == "j") == (stimulus == "img/orange.png")),
-    colour = str_remove_all(stimulus, "(img/|\\.png)")
+    colour = gsub("(img/|\\.png)", "", stimulus)
   ) %>% 
   filter(correct) %>% 
   group_by(colour) %>% 
@@ -157,13 +159,6 @@ sumtable <-
 
 sumtable
 
-sumtable %>% 
-  ggplot(aes(x = colour, y = mean_rt, 
-             ymin = mean_rt - sd, ymax = mean_rt + sd)) + 
-  geom_pointrange() + 
-  theme_minimal() + 
-  coord_cartesian(ylim = c(0, 1000)) + 
-  labs(x = "Colour", y = "Mean RT")
 ```
 
 
