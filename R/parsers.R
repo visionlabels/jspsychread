@@ -626,12 +626,16 @@ parse_survey_likert <- function(d) {
   responses <- d$response
   q_name <- names(responses)
   q_values <- unlist(responses)
+  names(q_values) <- NULL
   q_order <- unlist(d$question_order)
   q_order1 <- q_order + 1 # start indexing with 1
   nq <- length(q_name)
   response_tbl <-
-    tibble(question = q_name, response = q_values,
-           order = (1:nq))
+    tibble::tibble(
+      question = q_name,
+      response = q_values,
+      order = (1:nq)
+    )
   tibble::tibble(
     response = list(response_tbl),
     rt = single_value(d$rt),
@@ -1198,7 +1202,6 @@ parse_free_sort <- function(d) {
 #' }
 parse_serial_reaction_time_mouse <- function(d) {
   grid_array <- d$grid
-  print(d$grid)
   target <- d$target
   response <- d$response
   tibble::tibble(
