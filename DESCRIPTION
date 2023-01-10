@@ -1,5 +1,5 @@
 Package: jspsychread
-Title: Read jsPsych data
+Title: Reading jsPsych data
 Version: 0.1.0
 Authors@R: 
     person(given = "Jiri",
@@ -22,8 +22,8 @@ Imports:
     rlang,
     tidyr,
     purrr
-URL: https://github.com/jirilukavsky/jspsychread
-BugReports: https://github.com/jirilukavsky/jspsychread/issues
+URL: https://github.com/VisionLabels/jspsychread
+BugReports: https://github.com/VisionLabels/jspsychread/issues
 Suggests: 
     knitr,
     rmarkdown,
