@@ -22,9 +22,9 @@
 #' }
 parse_html_button_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus)
+    rt = v_integer(d$rt),
+    response = v_integer(d$response),
+    stimulus = v_character(d$stimulus)
   )
 }
 
@@ -50,9 +50,9 @@ parse_html_button_response <- function(d) {
 #' }
 parse_html_keyboard_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus)
+    rt = v_integer(d$rt),
+    response = v_character(d$response),
+    stimulus = v_character(d$stimulus)
   )
 }
 
@@ -78,10 +78,10 @@ parse_html_keyboard_response <- function(d) {
 #' }
 parse_html_slider_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus),
-    slider_start = single_value(d$slider_start)
+    rt = v_integer(d$rt),
+    response = v_integer(d$response),
+    stimulus = v_character(d$stimulus),
+    slider_start = v_integer(d$slider_start)
   )
 }
 
@@ -107,9 +107,9 @@ parse_html_slider_response <- function(d) {
 #' }
 parse_image_button_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus)
+    rt = v_integer(d$rt),
+    response = v_integer(d$response),
+    stimulus = v_character(d$stimulus)
   )
 }
 
@@ -135,9 +135,9 @@ parse_image_button_response <- function(d) {
 #' }
 parse_image_keyboard_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus)
+    rt = v_integer(d$rt),
+    response = v_character(d$response),
+    stimulus = v_character(d$stimulus)
   )
 }
 
@@ -163,10 +163,10 @@ parse_image_keyboard_response <- function(d) {
 #' }
 parse_image_slider_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus),
-    slider_start = single_value(d$slider_start)
+    rt = v_integer(d$rt),
+    response = v_integer(d$response),
+    stimulus = v_character(d$stimulus),
+    slider_start = v_integer(d$slider_start)
   )
 }
 
@@ -192,9 +192,9 @@ parse_image_slider_response <- function(d) {
 #' }
 parse_audio_button_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus)
+    rt = v_integer(d$rt),
+    response = v_integer(d$response),
+    stimulus = v_character(d$stimulus)
   )
 }
 
@@ -220,9 +220,9 @@ parse_audio_button_response <- function(d) {
 #' }
 parse_audio_keyboard_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus)
+    rt = v_integer(d$rt),
+    response = v_character(d$response),
+    stimulus = v_character(d$stimulus)
   )
 }
 
@@ -248,10 +248,10 @@ parse_audio_keyboard_response <- function(d) {
 #' }
 parse_audio_slider_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus),
-    slider_start = single_value(d$slider_start)
+    rt = v_integer(d$rt),
+    response = v_integer(d$response),
+    stimulus = v_character(d$stimulus),
+    slider_start = v_integer(d$slider_start)
   )
 }
 
@@ -277,9 +277,9 @@ parse_audio_slider_response <- function(d) {
 #' }
 parse_video_button_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus)
+    rt = v_integer(d$rt),
+    response = v_integer(d$response),
+    stimulus = v_character(d$stimulus)
   )
 }
 
@@ -305,9 +305,9 @@ parse_video_button_response <- function(d) {
 #' }
 parse_video_keyboard_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus)
+    rt = v_integer(d$rt),
+    response = v_character(d$response),
+    stimulus = v_character(d$stimulus)
   )
 }
 
@@ -333,11 +333,11 @@ parse_video_keyboard_response <- function(d) {
 #' }
 parse_video_slider_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    stimulus = single_value(d$stimulus),
-    slider_start = single_value(d$slider_start),
-    start = as.numeric(single_value(d$start))
+    rt = v_integer(d$rt),
+    response = v_integer(d$response),
+    stimulus = v_character(d$stimulus),
+    slider_start = v_integer(d$slider_start),
+    start = v_real(single_value(d$start))
   )
 }
 
@@ -363,8 +363,8 @@ parse_video_slider_response <- function(d) {
 #' }
 parse_canvas_button_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response)
+    rt = v_integer(d$rt),
+    response = v_integer(d$response)
   )
 }
 
@@ -390,8 +390,8 @@ parse_canvas_button_response <- function(d) {
 #' }
 parse_canvas_keyboard_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response)
+    rt = v_integer(d$rt),
+    response = v_character(d$response)
   )
 }
 
@@ -417,9 +417,9 @@ parse_canvas_keyboard_response <- function(d) {
 #' }
 parse_canvas_slider_response <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    response = single_value(d$response),
-    slider_start = single_value(d$slider_start)
+    rt = v_integer(d$rt),
+    response = v_integer(d$response),
+    slider_start = v_integer(d$slider_start)
   )
 }
 
@@ -447,7 +447,7 @@ parse_canvas_slider_response <- function(d) {
 #' }
 parse_call_function <- function(d) {
   tibble::tibble(
-    value = list(single_value(d$value))
+    value = list_column_of_vectors(d$value)
   )
 }
 
@@ -473,7 +473,7 @@ parse_call_function <- function(d) {
 #' }
 parse_fullscreen <- function(d) {
   tibble::tibble(
-    success = single_value(d$success)
+    success = v_logical(d$success)
   )
 }
 
@@ -501,8 +501,8 @@ parse_fullscreen <- function(d) {
 parse_instructions <- function(d) {
   view_history_list <- d$view_history
   tibble::tibble(
-    rt = single_value(d$rt),
-    view_history = list(bind_rows(view_history_list))
+    rt = v_integer(d$rt),
+    view_history = nested_tibble_from_list(view_history_list)
   )
 }
 
@@ -528,11 +528,11 @@ parse_instructions <- function(d) {
 #' }
 parse_preload <- function(d) {
   tibble::tibble(
-    success = single_value(d$success),
-    timeout = single_value(d$timeout),
-    failed_images = list(d$failed_images),
-    failed_audio = list(d$failed_audio),
-    failed_video = list(d$failed_video)
+    success = v_logical(d$success),
+    timeout = v_logical(d$timeout),
+    failed_images = list_column_of_vectors(v_character(d$failed_images)),
+    failed_audio = list_column_of_vectors(v_character(d$failed_audio)),
+    failed_video = list_column_of_vectors(v_character(d$failed_video))
   )
 }
 
@@ -558,8 +558,8 @@ parse_preload <- function(d) {
 #' }
 parse_external_html <- function(d) {
   tibble::tibble(
-    url = single_value(d$url),
-    rt = single_value(d$rt)
+    url = v_character(d$url),
+    rt = v_integer(d$rt)
   )
 }
 
@@ -592,8 +592,8 @@ parse_external_html <- function(d) {
 #' }
 parse_survey_html_form <- function(d) {
   tibble::tibble(
-    response = list(single_value(d$response)),
-    rt = single_value(d$rt)
+    response = list_column_of_vectors(d$response),
+    rt = v_integer(d$rt)
   )
 }
 
@@ -637,9 +637,9 @@ parse_survey_likert <- function(d) {
       order = (1:nq)
     )
   tibble::tibble(
-    response = list(response_tbl),
-    rt = single_value(d$rt),
-    question_order = list(single_value(q_order1))
+    response = nested_tibble(response_tbl),
+    rt = v_integer(d$rt),
+    question_order = list_column_of_vectors(v_integer(q_order1))
   )
 }
 
@@ -678,9 +678,9 @@ parse_survey_multi_choice <- function(d) {
     tibble(question = q_name, response = q_values,
            order = (1:nq))
   tibble::tibble(
-    response = list(response_tbl),
-    rt = single_value(d$rt),
-    question_order = list(single_value(q_order1))
+    response = nested_tibble(response_tbl),
+    rt = v_integer(d$rt),
+    question_order = list_column_of_vectors(v_integer(q_order1))
   )
 }
 
@@ -725,9 +725,9 @@ parse_survey_multi_select <- function(d) {
   response_tbl <-
     bind_rows(response_list)
   tibble::tibble(
-    response = list(response_tbl),
-    rt = single_value(d$rt),
-    question_order = list(single_value(q_order1))
+    response = nested_tibble(response_tbl),
+    rt = v_integer(d$rt),
+    question_order = list_column_of_vectors(v_integer(q_order1))
   )
 }
 
@@ -766,9 +766,9 @@ parse_survey_text <- function(d) {
     tibble(question = q_name, response = q_values,
            order = (1:nq))
   tibble::tibble(
-    response = list(response_tbl),
-    rt = single_value(d$rt),
-    question_order = list(single_value(q_order1))
+    response = nested_tibble(response_tbl),
+    rt = v_integer(d$rt),
+    question_order = list_column_of_vectors(v_integer(q_order1))
   )
 }
 
@@ -797,11 +797,11 @@ parse_survey_text <- function(d) {
 #' }
 parse_maxdiff <- function(d) {
   tibble::tibble(
-    rt = single_value(d$rt),
-    label_left = single_value(d$labels$left),
-    label_right = single_value(d$labels$right),
-    response_left = single_value(d$response$left),
-    response_right = single_value(d$response$right),
+    rt = v_integer(d$rt),
+    label_left = v_character(d$labels$left),
+    label_right = v_character(d$labels$right),
+    response_left = v_character(d$response$left),
+    response_right = v_character(d$response$right),
   )
 }
 
@@ -830,8 +830,8 @@ parse_maxdiff <- function(d) {
 #' }
 parse_animation <- function(d) {
   tibble::tibble(
-    animation_sequence = list(bind_rows(d$animation_sequence)),
-    response = list(bind_rows(d$response))
+    animation_sequence = nested_tibble_from_list(d$animation_sequence),
+    response = nested_tibble_from_list(d$response)
   )
 }
 
@@ -857,10 +857,10 @@ parse_animation <- function(d) {
 #' }
 parse_categorize_animation <- function(d) {
   tibble::tibble(
-    stimulus = list(single_value(d$stimulus)),
-    response = single_value(d$response),
-    rt = single_value(d$rt),
-    correct = single_value(d$correct)
+    stimulus = list_column_of_vectors(v_character(d$stimulus)),
+    response = v_character(d$response),
+    rt = v_integer(d$rt),
+    correct = v_logical(d$correct)
   )
 }
 
@@ -886,10 +886,10 @@ parse_categorize_animation <- function(d) {
 #' }
 parse_categorize_html <- function(d) {
   tibble::tibble(
-    stimulus = single_value(d$stimulus),
-    response = single_value(d$response),
-    rt = single_value(d$rt),
-    correct = single_value(d$correct)
+    stimulus = v_character(d$stimulus),
+    response = v_character(d$response),
+    rt = v_integer(d$rt),
+    correct = v_logical(d$correct)
   )
 }
 
@@ -915,10 +915,10 @@ parse_categorize_html <- function(d) {
 #' }
 parse_categorize_image <- function(d) {
   tibble::tibble(
-    stimulus = single_value(d$stimulus),
-    response = single_value(d$response),
-    rt = single_value(d$rt),
-    correct = single_value(d$correct)
+    stimulus = v_character(d$stimulus),
+    response = v_character(d$response),
+    rt = v_integer(d$rt),
+    correct = v_logical(d$correct)
   )
 }
 
@@ -944,10 +944,10 @@ parse_categorize_image <- function(d) {
 #' }
 parse_iat_image <- function(d) {
   tibble::tibble(
-    stimulus = single_value(d$stimulus),
-    response = single_value(d$response),
-    rt = single_value(d$rt),
-    correct = single_value(d$correct)
+    stimulus = v_character(d$stimulus),
+    response = v_character(d$response),
+    rt = v_integer(d$rt),
+    correct = v_logical(d$correct)
   )
 }
 
@@ -973,10 +973,10 @@ parse_iat_image <- function(d) {
 #' }
 parse_iat_html <- function(d) {
   tibble::tibble(
-    stimulus = single_value(d$stimulus),
-    response = single_value(d$response),
-    rt = single_value(d$rt),
-    correct = single_value(d$correct)
+    stimulus = v_character(d$stimulus),
+    response = v_character(d$response),
+    rt = v_integer(d$rt),
+    correct = v_logical(d$correct)
   )
 }
 
@@ -1002,9 +1002,9 @@ parse_iat_html <- function(d) {
 #' }
 parse_reconstruction <- function(d) {
   tibble::tibble(
-    start_value = single_value(d$start_value),
-    final_value = single_value(d$final_value),
-    rt = single_value(d$rt)
+    start_value = v_real(d$start_value),
+    final_value = v_real(d$final_value),
+    rt = v_integer(d$rt)
   )
 }
 
@@ -1030,8 +1030,8 @@ parse_reconstruction <- function(d) {
 #' }
 parse_resize <- function(d) {
   tibble::tibble(
-    final_width_px = single_value(d$final_width_px),
-    scale_factor = single_value(d$scale_factor)
+    final_width_px = v_integer(d$final_width_px),
+    scale_factor = v_real(d$scale_factor)
   )
 }
 
@@ -1058,15 +1058,15 @@ parse_resize <- function(d) {
 parse_same_different_html <- function(d) {
   stimuli <- d$stimulus
   tibble::tibble(
-    stimulus = list(single_value(stimuli)),
-    response = single_value(d$response),
-    rt = single_value(d$rt),
-    correct = single_value(d$correct),
-    answer = single_value(d$answer),
-    rt_stim1 = single_value(d$rt_stim1),
-    response_stim1 = single_value(d$response_stim1),
-    stimulus1 = single_value(stimuli[[1]]),
-    stimulus2 = single_value(stimuli[[2]])
+    stimulus = list_column_of_vectors(v_character(stimuli)),
+    response = v_character(d$response),
+    rt = v_integer(d$rt),
+    correct = v_logical(d$correct),
+    answer = v_character(d$answer),
+    rt_stim1 = v_integer(d$rt_stim1),
+    response_stim1 = v_character(d$response_stim1),
+    stimulus1 = v_character(stimuli[[1]]),
+    stimulus2 = v_character(stimuli[[2]])
   )
 }
 
@@ -1093,15 +1093,15 @@ parse_same_different_html <- function(d) {
 parse_same_different_image <- function(d) {
   stimuli <- d$stimulus
   tibble::tibble(
-    stimulus = list(single_value(stimuli)),
-    response = single_value(d$response),
-    rt = single_value(d$rt),
-    correct = single_value(d$correct),
-    answer = single_value(d$answer),
-    rt_stim1 = single_value(d$rt_stim1),
-    response_stim1 = single_value(d$response_stim1),
-    stimulus1 = single_value(stimuli[[1]]),
-    stimulus2 = single_value(stimuli[[2]])
+    stimulus = list_column_of_vectors(v_character(stimuli)),
+    response = v_character(d$response),
+    rt = v_integer(d$rt),
+    correct = v_logical(d$correct),
+    answer = v_character(d$answer),
+    rt_stim1 = v_integer(d$rt_stim1),
+    response_stim1 = v_character(d$response_stim1),
+    stimulus1 = v_character(stimuli[[1]]),
+    stimulus2 = v_character(stimuli[[2]])
   )
 }
 
@@ -1132,7 +1132,7 @@ parse_same_different_image <- function(d) {
 #' }
 parse_cloze <- function(d) {
   tibble::tibble(
-    response = list(single_value(d$response))
+    response = list_column_of_vectors(v_character(d$response))
   )
 }
 
@@ -1170,9 +1170,9 @@ parse_free_sort <- function(d) {
     left_join(final_locations, by = "src",
               suffix = c("_init", "_final"))
   tibble::tibble(
-    locations = list(locations),
-    moves = list(moves),
-    rt = single_value(d$rt)
+    locations = nested_tibble(locations),
+    moves = nested_tibble(moves),
+    rt = v_integer(d$rt)
   )
 }
 
@@ -1206,12 +1206,12 @@ parse_serial_reaction_time_mouse <- function(d) {
   response <- d$response
   tibble::tibble(
     grid = list(list2_to_matrix(d$grid)),
-    target_x = single_value(target[[1]]),
-    target_y = single_value(target[[2]]),
-    rt = single_value(d$rt),
-    response_x = single_value(response[[1]]),
-    response_y = single_value(response[[2]]),
-    correct = single_value(d$correct)
+    target_x = v_integer(target[[2]]), # [row, column] = [y, x]
+    target_y = v_integer(target[[1]]),
+    rt = v_integer(d$rt),
+    response_x = v_integer(response[[2]]), # [row, column] = [y, x]
+    response_y = v_integer(response[[1]]),
+    correct = v_logical(d$correct)
   )
 }
 
@@ -1244,12 +1244,12 @@ parse_visual_search_circle <- function(d) {
   colnames(xy) <- c("x", "y")
   locations <- as_tibble(xy)
   tibble::tibble(
-    correct = single_value(d$correct),
-    response = single_value(d$response),
-    rt = single_value(d$rt),
-    set_size = single_value(d$set_size),
-    target_present = single_value(d$target_present),
-    locations = list(locations)
+    correct = v_logical(d$correct),
+    response = v_character(d$response),
+    rt = v_integer(d$rt),
+    set_size = v_integer(d$set_size),
+    target_present = v_logical(d$target_present),
+    locations = nested_tibble(locations)
   )
 }
 

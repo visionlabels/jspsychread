@@ -116,10 +116,9 @@ test_that("Parsers reach accurate numbers", {
     unnest(processed)
   # for individual values
   di <- d %>%
-    unnest(response) %>%
-    mutate(cell_value = flatten_chr(response))
+    unnest(response)
   expect_equal(d$time_elapsed, c(36177, 52907))
-  expect_equal(di$cell_value, c("hamster", "Europe", "Asia", "4", "3"))
+  expect_equal(di$response, c("hamster", "Europe", "Asia", "4", "3"))
 
   # "jspsych-free-sort.json"
   fn <- demo_file("jspsych-free-sort.json")
@@ -144,8 +143,8 @@ test_that("Parsers reach accurate numbers", {
     unnest(processed)
   expect_equal(d$time_elapsed,
                c(2200, 3015, 3782, 4515, 5398, 6048, 6815, 7465, 8298, 8965, 9732, 10465))
-  expect_equal(d$target_x, c(2, 3, 6, 7, 1, 2, 4, 3, 1, 0, 2, 1))
-  expect_equal(d$response_x, c(2, 3, 6, 7, 1, 2, 4, 3, 1, 0, 2, 1))
+  expect_equal(d$target_y, c(2, 3, 6, 7, 1, 2, 4, 3, 1, 0, 2, 1))
+  expect_equal(d$response_y, c(2, 3, 6, 7, 1, 2, 4, 3, 1, 0, 2, 1))
   expect_equal(d$correct, rep(T, 12))
 
   # "jspsych-visual-search-circle.json"

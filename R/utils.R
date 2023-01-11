@@ -39,6 +39,63 @@ v_real <- function(x) { if (is.null(x)) NA_real_ else as.numeric(x)}
 #' @export
 v_logical <- function(x) { if (is.null(x)) NA else as.logical(x)}
 
+#' Wrapper to nest a tibble into parser result
+#'
+#' Mainly used for documenting the parser code.
+#'
+#' @param x Tibble
+#'
+#' @return List containing x
+#' @export
+#'
+#' @examples
+#' library(tibble)
+#' ta <- tibble(a = 1:2)
+#' tb <- tibble(i = 1, j = nested_tibble(ta))
+#' ta
+#' tb
+nested_tibble <- function(x) {
+  list(x)
+}
+
+#' Wrapper to nest a tibble from a list into parser result
+#'
+#' Mainly used for documenting the parser code.
+#'
+#' @param x List which can be transformed to tibble using `bind_rows`
+#'
+#' @return List containing tibble created from x
+#' @export
+#'
+#' @examples
+#' library(tibble)
+#' d <- list(list("a" = 1, "b" = "apple"), list("a" = 2, "b" = "banana"))
+#' d
+#' tb <- tibble(i = 1, j = nested_tibble_from_list(d))
+#' tb
+nested_tibble_from_list <- function(x) {
+  list(bind_rows(x))
+}
+
+#' Wrapper to create a list column with vectors in parser results
+#'
+#' Mainly used for documenting the parser code.
+#'
+#' @param x Vector
+#' @param replace_null True if NULL should be replaced with NA
+#'
+#' @return List containing x
+#' @export
+#'
+#' @examples
+list_column_of_vectors <- function(x, replace_null = T) {
+  if (replace_null) {
+    list(single_value(x))
+  } else {
+    list(x)
+  }
+}
+
 #' Convert list of lists into a matrix
 #'
 #' We expect the same representation as in serial-reaction-time-mouse:
