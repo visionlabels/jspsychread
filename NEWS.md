@@ -1,3 +1,5 @@
+# jspsychread 0.2.0
+
 # jspsychread 0.1.0
 
 * The package is transitioning to the new workflow (process_records). 
