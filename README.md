@@ -54,3 +54,31 @@ d %>%
 
 ```
 
+In the examples above, you explicitly defined what function should be used to 
+process the trial data. Since version 0.3.0, `process_records` can auto-detect
+which parser to use based on the `trial_type` column. 
+
+Intentionally, it is still required all trials in the tibble are of the same type
+(use `filter` or `group_by`) to discourage having tibbles from different trial types
+in the same tibble, because it would not be possible to `unnest` it.
+
+You can use simpler call:
+
+``` r
+d %>%
+  filter(trial_type == trial_types$html_button_response) %>%
+  process_records(.using = parse_html_button_response) %>%
+  unnest(processed)
+```
+
+Or even parse everything into a list of tibbles.
+
+``` r
+dl <-
+  d %>% 
+  group_split(trial_type) %>% 
+  map(~ process_records(.x))
+dl
+dl %>% map(~ .x %>% unnest(processed))
+```
+
