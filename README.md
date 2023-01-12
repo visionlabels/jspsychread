@@ -17,7 +17,7 @@ You can install the current version from GitHub with following code:
 if(!"devtools" %in% rownames(installed.packages())) install.packages("devtools")
 
 # Install the stable verion from GitHub
-devtools::install_github("jirilukavsky/jspsychread")
+devtools::install_github("visionlabels/jspsychread")
 ```
 
 ## Example
@@ -27,6 +27,7 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(tidyverse)
 library(jspsychread)
+
 ## basic example code
 
 fn <- demo_file("jspsych-video-button-response.json")

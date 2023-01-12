@@ -22,8 +22,8 @@ Imports:
     rlang,
     tidyr,
     purrr
-URL: https://github.com/VisionLabels/jspsychread
-BugReports: https://github.com/VisionLabels/jspsychread/issues
+URL: https://github.com/visionlabels/jspsychread
+BugReports: https://github.com/visionlabels/jspsychread/issues
 Suggests: 
     knitr,
     rmarkdown,

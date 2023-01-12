@@ -4,15 +4,15 @@
 \name{jspsychread-package}
 \alias{jspsychread}
 \alias{jspsychread-package}
-\title{jspsychread: Read jsPsych data}
+\title{jspsychread: Reading jsPsych data}
 \description{
 The package helps to process JSON data collected using jsPsych scripts.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/jirilukavsky/jspsychread}
-  \item Report bugs at \url{https://github.com/jirilukavsky/jspsychread/issues}
+  \item \url{https://github.com/VisionLabels/jspsychread}
+  \item Report bugs at \url{https://github.com/VisionLabels/jspsychread/issues}
 }
 
 }
