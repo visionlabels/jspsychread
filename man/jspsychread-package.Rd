@@ -11,8 +11,8 @@ The package helps to process JSON data collected using jsPsych scripts.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/VisionLabels/jspsychread}
-  \item Report bugs at \url{https://github.com/VisionLabels/jspsychread/issues}
+  \item \url{https://github.com/visionlabels/jspsychread}
+  \item Report bugs at \url{https://github.com/visionlabels/jspsychread/issues}
 }
 
 }
