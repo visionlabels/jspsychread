@@ -1,0 +1,10 @@
+pandoc: 2.19.2
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  jspsychread: jspsychread.html
+last_built: 2023-01-12T18:39Z
+urls:
+  reference: https://visionlabels.github.io/jspsychread/reference
+  article: https://visionlabels.github.io/jspsychread/articles
+
