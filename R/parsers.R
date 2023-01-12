@@ -1190,7 +1190,8 @@ parse_free_sort <- function(d) {
 #' \dontrun{
 #' fn <- demo_file("jspsych-serial-reaction-time-mouse.json")
 #' d  <- read_jspsych(fn)
-#' d %>%
+#' trials <-
+#'   d %>%
 #'   filter(trial_type == trial_types$serial_reaction_time_mouse) %>%
 #'   select(record, trial_index, raw) %>%
 #'   process_records(.using = parse_serial_reaction_time_mouse) %>%
