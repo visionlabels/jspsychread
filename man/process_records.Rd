@@ -4,12 +4,14 @@
 \alias{process_records}
 \title{Process raw jsPsych data}
 \usage{
-process_records(x, .using = NULL)
+process_records(x, .using = NULL, auto = default_parsers())
 }
 \arguments{
 \item{x}{Dataset with jsPsych records}
 
 \item{.using}{Parser function to use on each record. Use \code{NULL} for auto-detection.}
+
+\item{auto}{List of trial types and parser functions used for auto-detection.}
 }
 \value{
 Original dataset with new column \code{processed} with nested results.
@@ -24,6 +26,11 @@ d  <- read_jspsych(fn)
 d \%>\%
   filter(trial_type == trial_types$html_button_response) \%>\%
   process_records(.using = parse_html_button_response) \%>\%
+  unnest(processed)
+# auto-detected
+d \%>\%
+  filter(trial_type == trial_types$html_button_response) \%>\%
+  process_records() \%>\%
   unnest(processed)
 }
 }

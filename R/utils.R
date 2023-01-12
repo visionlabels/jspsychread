@@ -88,6 +88,10 @@ nested_tibble_from_list <- function(x) {
 #' @export
 #'
 #' @examples
+#' library(tibble)
+#' tb <- tibble(i = 1, j = list_column_of_vectors(1:10))
+#' tb
+#' tb$j[[1]]
 list_column_of_vectors <- function(x, replace_null = T) {
   if (replace_null) {
     list(single_value(x))

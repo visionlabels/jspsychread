@@ -1216,6 +1216,45 @@ parse_serial_reaction_time_mouse <- function(d) {
   )
 }
 
+#' serial-reaction-time parser
+#'
+#' https://www.jspsych.org/7.3/plugins/serial-reaction-time
+#'
+#' @param d List with unprocessed trial data
+#'
+#' @return Single row tibble with results. Check [jsPsych documentation](https://www.jspsych.org/7.3/plugins/serial-reaction-time)
+#' for the list of available variables.
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' fn <- demo_file("jspsych-serial-reaction-time.json")
+#' d  <- read_jspsych(fn)
+#' trials <-
+#'   d %>%
+#'   filter(trial_type == trial_types$serial_reaction_time) %>%
+#'   select(record, trial_index, raw) %>%
+#'   process_records(.using = parse_serial_reaction_time) %>%
+#'   unnest(processed)
+#' trials %>%
+#'   select(-raw) %>%
+#'   mutate(ncol = map_int(.$grid, ~ ncol(.)),
+#'          nrow = map_int(.$grid, ~ nrow(.)))
+#' }
+parse_serial_reaction_time <- function(d) {
+  grid_array <- d$grid
+  target <- d$target
+  tibble::tibble(
+    grid = list(list2_to_matrix(d$grid)),
+    target_x = v_integer(target[[2]]), # [row, column] = [y, x]
+    target_y = v_integer(target[[1]]),
+    rt = v_integer(d$rt),
+    response = v_character(d$response),
+    correct = v_logical(d$correct)
+  )
+}
+
+
 #' visual-search-circle parser
 #'
 #' https://www.jspsych.org/7.3/plugins/visual-search-circle

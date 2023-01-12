@@ -147,6 +147,19 @@ test_that("Parsers reach accurate numbers", {
   expect_equal(d$response_y, c(2, 3, 6, 7, 1, 2, 4, 3, 1, 0, 2, 1))
   expect_equal(d$correct, rep(T, 12))
 
+  # "jspsych-serial-reaction-time.json"
+  fn <- demo_file("jspsych-serial-reaction-time.json")
+  d  <- read_jspsych(fn) %>%
+    filter(trial_type == trial_types$serial_reaction_time) %>%
+    process_records(.using = parse_serial_reaction_time) %>%
+    unnest(processed)
+  expect_equal(nrow(d), 40)
+  expect_equal(d$time_elapsed[1:6],
+               c(9013, 11651, 12531, 13547, 14663, 15579))
+  expect_equal(d$target_x[1:6], c(2, 1, 0, 3, 0, 3))
+  expect_equal(d$response[1:6], c("3", "5", "3", "9", "3", "9"))
+  expect_equal(d$correct, c(F, rep(T, 39)))
+
   # "jspsych-visual-search-circle.json"
   fn <- demo_file("jspsych-visual-search-circle.json")
   d  <- read_jspsych(fn) %>%

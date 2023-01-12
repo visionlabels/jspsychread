@@ -17,3 +17,9 @@ List containing x
 \description{
 Mainly used for documenting the parser code.
 }
+\examples{
+library(tibble)
+tb <- tibble(i = 1, j = list_column_of_vectors(1:10))
+tb
+tb$j[[1]]
+}
