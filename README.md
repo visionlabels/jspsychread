@@ -10,7 +10,9 @@ The goal of `jspsychread` is to transform the data collected in
 ## Installation
 
 The package is in active development. 
-You can install the current version from GitHub with following code:
+You can install the current version 
+from [GitHub](https://github.com/visionlabels/jspsychread) 
+with following code:
 
 ``` r
 # Install devtools package if necessary
@@ -19,6 +21,12 @@ if(!"devtools" %in% rownames(installed.packages())) install.packages("devtools")
 # Install the stable verion from GitHub
 devtools::install_github("visionlabels/jspsychread")
 ```
+
+## How to start
+
+Check the example below which covers the main parts of the workflow.
+More detailed walk-through is included in the package 
+[vignette](./articles/jspsychread.html) (see `vignette("jspsychread")`). 
 
 ## Example
 
