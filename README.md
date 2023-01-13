@@ -62,13 +62,15 @@ d %>%
 
 ```
 
-In the examples above, you explicitly defined what function should be used to 
-process the trial data. Since version 0.3.0, `process_records` can auto-detect
-which parser to use based on the `trial_type` column. 
+In the examples above, you explicitly defined what function to use to 
+process the trial data. 
+Since version 0.3.0, `process_records` can auto-detect
+the parser based on the `trial_type` column. 
 
-Intentionally, it is still required all trials in the tibble are of the same type
-(use `filter` or `group_by`) to discourage having tibbles from different trial types
-in the same tibble, because it would not be possible to `unnest` it.
+It is still required that all trials in the tibble are of the same type and 
+you should use `filter` or `group_by` to separate different trial types. 
+It is an intentional decision. 
+With diverse trial types in the same tibble, it would not be possible to `unnest` it.
 
 You can use simpler call:
 
