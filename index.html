@@ -72,13 +72,18 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>The package is in active development. You can install the current version from GitHub with following code:</p>
+<p>The package is in active development. You can install the current version from <a href="https://github.com/visionlabels/jspsychread" class="external-link">GitHub</a> with following code:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Install devtools package if necessary</span></span>
 <span><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="st">"devtools"</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html" class="external-link">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Install the stable verion from GitHub</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"visionlabels/jspsychread"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="how-to-start">How to start<a class="anchor" aria-label="anchor" href="#how-to-start"></a>
+</h2>
+<p>Check the example below which covers the main parts of the workflow. More detailed walk-through is included in the package <a href="./articles/jspsychread.html">vignette</a> (see <code><a href="articles/jspsychread.html">vignette("jspsychread")</a></code>).</p>
 </div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
@@ -111,8 +116,8 @@
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">record</span>, <span class="va">trial_index</span>, <span class="va">raw</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="reference/process_records.html">process_records</a></span><span class="op">(</span>.using <span class="op">=</span> <span class="va">parse_video_button_response</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">unnest</span><span class="op">(</span><span class="va">processed</span><span class="op">)</span></span></code></pre></div>
-<p>In the examples above, you explicitly defined what function should be used to process the trial data. Since version 0.3.0, <code>process_records</code> can auto-detect which parser to use based on the <code>trial_type</code> column.</p>
-<p>Intentionally, it is still required all trials in the tibble are of the same type (use <code>filter</code> or <code>group_by</code>) to discourage having tibbles from different trial types in the same tibble, because it would not be possible to <code>unnest</code> it.</p>
+<p>In the examples above, you explicitly defined what function to use to process the trial data. Since version 0.3.0, <code>process_records</code> can auto-detect the parser based on the <code>trial_type</code> column.</p>
+<p>It is still required that all trials in the tibble are of the same type and you should use <code>filter</code> or <code>group_by</code> to separate different trial types. It is an intentional decision. With diverse trial types in the same tibble, it would not be possible to <code>unnest</code> it.</p>
 <p>You can use simpler call:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
